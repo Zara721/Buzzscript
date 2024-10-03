@@ -1,6 +1,6 @@
 :root {
     --background-color: #2a2424;
-    --text-color: #faf4de;
+    --text-color: white;
     --accent-color: #F1BA0A;
   }
 
@@ -32,5 +32,21 @@
  }
 
  #main-banner {
-  background-image: url(images/hero_image.jpg);
+  background-image: url(/images/hero_image.jpg);
+  background-color: black;
+  background-size: contain;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  width: 100%;
+  object-fit: cover;
+  min-height: 500px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ }
+
+ #main-banner h1{
+  font-size: 7em;
  }
