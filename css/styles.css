@@ -20,13 +20,17 @@
     color: var(--text-color);
   }
 
-  #topbar li {
-    list-style-type: none;
-    padding-right: 1em;
-    padding-top: 2em;
-    padding-left: 0.5em;
+#topbar li {
+  list-style-type: none;
+  padding-right: 1em;
+  padding-top: 2em;
+  padding-left: 0.5em;
  }
 
  #topbar ul {
   display: flex;
+ }
+
+ #main-banner {
+  background-image: url(images/hero_image.jpg);
  }
