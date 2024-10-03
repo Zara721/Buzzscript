@@ -1,0 +1,32 @@
+:root {
+    --background-color: #2a2424;
+    --text-color: #faf4de;
+    --accent-color: #F1BA0A;
+  }
+
+  body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+
+  header {
+    background-color: black;
+    width: 100%;
+    min-height: 80px;
+  }
+
+  #topbar a {
+    text-decoration: none;
+    color: var(--text-color);
+  }
+
+  #topbar li {
+    list-style-type: none;
+    padding-right: 1em;
+    padding-top: 2em;
+    padding-left: 0.5em;
+ }
+
+ #topbar ul {
+  display: flex;
+ }
