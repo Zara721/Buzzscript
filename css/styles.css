@@ -44,6 +44,7 @@
     background-color: #eeae22;
     padding: 5px 10px;
     border-radius: 10px;
+    transition: 0.3s;
   }
 
   #topbar a:hover {
@@ -54,6 +55,10 @@
     visibility:hidden;
     height: 40px;
   }
+
+button {
+  background-color: inherit;
+}
   
 
 #topbar li {
@@ -61,8 +66,12 @@
   padding-right: 25px;
  }
 
- #topbar ul {
+ #nav-links {
   display: flex;
+ }
+
+ #close-nav {
+  visibility: hidden;
  }
 
  #icon {
@@ -191,14 +200,48 @@ footer {
     overflow: hidden;
    }
 
-   nav ul {
-    visibility: hidden;
-    width: 50%;
+   #nav-links {
+    position: fixed;
+    top: 0px;
+    right: -35vw;
+    flex-direction: column;
+    gap: 25px;
+    align-items: end;
+    justify-content: center;
+    background-color: black;
+    height: 50vh;
+    width: 35vw;
+    transition: 0.5s;
    }
+
+   #nav-links ul {
+    padding: 0;
+   }
+
+   #topbar a {
+    text-decoration: none;
+    color: #f7f7f7;
+    background-color: inherit;
+    width: 100%;
+  }
+
+  #topbar a:hover{
+    background-color: rgb(34, 33, 33);
+  }
 
    #hamburger_icon {
     visibility:visible;
     height: 40px;
+  }
+
+  nav>button {
+    position: absolute;
+    right: 20px;
+  }
+
+  nav button {
+    cursor: pointer;
+    color: white;
   }
 
    header {
@@ -226,6 +269,10 @@ and (max-width: 768px)
     
      #main-banner {
       gap: 20px;
+     }
+
+     #nav-links {
+      visibility: visible;
      }
 
      header {
