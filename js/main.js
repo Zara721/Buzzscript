@@ -7,3 +7,5 @@ function closeNav() {
     document.getElementById("nav-links").style.right = "-35vw";
     document.getElementById("close-nav").style.visibility = "hidden";
   }
+
+
