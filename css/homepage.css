@@ -200,3 +200,22 @@ form {
     padding-bottom: 0.5em;
     padding-top: 0.5em;
 }
+
+/* styles for small screens */
+@media only screen and (max-width:480px) {
+    main h1 {
+        font-size: 4em;
+    }
+
+    #side-nav.show {
+        width: 200px;
+    }
+}
+
+/* styles for tablet screens */
+@media only screen and (min-width: 481px)
+and (max-width: 768px) {
+    #side-nav.show {
+        width: 250px;
+    }
+}
