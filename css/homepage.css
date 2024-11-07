@@ -211,8 +211,8 @@ button {
         font-size: 3.6em;
     }
 
-    nav {
-        left: 0;
+    #profile-pic {
+        height: 180px;
     }
 
     /* add a light grey overlay to whole screen */
@@ -225,13 +225,10 @@ button {
         display: none; 
         width: 100%;
         height: 100%;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
+        top: 0; left: 0; right: 0; bottom: 0;
         background-color: rgba(0,0,0,0.5);
         z-index: 0;
-      }
+    }
     
     #overlay.show {
         display: block;
@@ -241,7 +238,15 @@ button {
 /* styles for tablet screens */
 @media only screen and (min-width: 481px)
 and (max-width: 768px) {
+
     #side-nav.show {
         width: 250px;
+    }
+}
+
+/* common styles for screens and tablets */
+@media only screen and (max-width:768px) {
+    nav {
+        left: 0;
     }
 }
