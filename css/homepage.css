@@ -211,6 +211,10 @@ button {
         font-size: 3.6em;
     }
 
+    nav {
+        left: 0;
+    }
+
     /* add a light grey overlay to whole screen */
     #side-nav.show {
         width: 200px;
