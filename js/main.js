@@ -11,11 +11,11 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
   document.getElementById("quiz-btn").addEventListener("click", function() {
-    menu.classList.toggle("show");
+    menu.style.height = "100%";
   });
 
   document.querySelector("#popup-menu .close-btn").addEventListener("click", function() {
-    menu.classList.toggle("show");
+    menu.style.height = "0%";
   });
 
 }) 

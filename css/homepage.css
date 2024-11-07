@@ -54,7 +54,7 @@ nav a:active {
     background-color: var(--yellow-color);
 }
 
-nav li {
+li {
     list-style: none;
 }
 
@@ -152,36 +152,46 @@ form {
 }
 
 #popup-menu {
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
+    width: 100%;
+    height: 0;
+    position: fixed;
+    z-index: 1;
     background-color: #000000de;
     color: #f7f7f7;
+    left: 0;
+    top: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    visibility: hidden;
+    overflow: hidden;
+    transition: 0.5s;
+    /* visibility: hidden; */
 }
 
 #popup-menu.show {
     visibility:visible;
 }
 
-#menu-header{
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 1em;
+#popup-menu h2 {
+    letter-spacing: 2px;
+    font-size: 1.5em;
+    padding-bottom: 10px;
 }
 
-#menu-header h2 {
-    letter-spacing: 2px;
-    font-size: 1.2em;
+
+#popup-menu .close-btn {
+    float: right;
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    font-family: 'Lucida Sans', sans-serif;
 }
 
 #menu-content {
-    width: 550px;
-    height: 400px;
+    margin-top: 30px;
+    width: clamp(200px, 60%, 550px);
     font-family: Montserrat, sans-serif;
 }
 
