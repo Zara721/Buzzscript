@@ -109,6 +109,10 @@ form {
     padding-bottom: 1.5em;
 }
 
+button {
+    color: black;
+}
+
 #action-buttons {
     display: flex;
     justify-content: space-between;
@@ -204,9 +208,10 @@ form {
 /* styles for small screens */
 @media only screen and (max-width:480px) {
     main h1 {
-        font-size: 4em;
+        font-size: 3.6em;
     }
 
+    /* add a light grey overlay to whole screen */
     #side-nav.show {
         width: 200px;
     }
