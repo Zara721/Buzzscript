@@ -1,0 +1,25 @@
+:root {
+    --background-color:rgb(255, 255, 255);
+    --text-color: rgb(0, 0, 0);
+    --yellow-color: #fbbe21;
+    --orange-color: #e4550f;
+  }
+
+  * {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+
+@font-face {
+    font-family: FingerPaint;
+    src: url(../fonts/FingerPaint-Regular.ttf);
+}
+
+@font-face {
+    font-family: Fugaz;
+    src: url(../fonts/FugazOne-Regular.ttf);
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url(../fonts/Montserrat-VariableFont_wght.ttf);
+}
