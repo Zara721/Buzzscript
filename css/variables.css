@@ -5,9 +5,9 @@
     --orange-color: #e4550f;
   }
 
-  * {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  }
+* {
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 
 @font-face {
     font-family: FingerPaint;
@@ -22,4 +22,9 @@
 @font-face {
     font-family: Montserrat;
     src: url(../fonts/Montserrat-VariableFont_wght.ttf);
+}
+
+body {
+    min-height: 100vh;
+    min-width: 100vw;
 }

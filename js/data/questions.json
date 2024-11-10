@@ -1,0 +1,54 @@
+const questions = `{
+    "horror_character": [
+      {
+        "question": "You hike in the woods in the evening and see an old house (worn down clearly abandoned house) in distance. What do you do?",
+        "option_a": "RUN AWAY!",
+        "option_b": "Enter by yourself",
+        "option_c": "Go get your friends",
+        "option_d": "Survey the House"
+      },
+      {
+        "question": "You see a cloaked hitchhiker on the side of the road from your car, gesturing for a ride. What do you do?",
+        "option_a": "Slow down to give them a ride",
+        "option_b": "Drive past and ignore them",
+        "option_c": "Give them money to get a cab",
+        "option_d": "Wish them well, but be on your way."
+      },
+      {
+        "question": "The light reflects off the gem of a strange ring at a farmer’s market. Do you…",
+        "option_a": "Ask how much the ring is",
+        "option_b": "Feign interest in other items",
+        "option_c": "Snatch the ring when the shopkeeper's distracted",
+        "option_d": "Walk away from the stall"
+      },
+      {
+        "question": "You come across a gothic vintage doll in a thrift store, it’s going for a very low price, it’s still in good condition but has had many previous owners. What do you do?",
+        "option_a": "Buy the doll, it’s a steal after all",
+        "option_b": "Put the thrift store on your blacklist",
+        "option_c": "Inquire about the doll’s history",
+        "option_d": "Bargain to lower the price even further"
+      },
+      {
+        "question": "After receiving an old mirror as a farewell gift from your distant aunt, you have been noticing that your reflection is out of sync. What do you do?",
+        "option_a": "Smash the mirror, immediately, it’s clearly haunted!",
+        "option_b": "Give the mirror away",
+        "option_c": "Plant the mirror in the boys locker room",
+        "option_d": "Seek professional advice"
+      },
+      {
+        "question": "You’re home alone on a Saturday night, you keep hearing strange noises by the window. What do you do?",
+        "option_a": "Go investigate what’s going on",
+        "option_b": "Go back to chatting with your friend on your phone",
+        "option_c": "Start videotaping through the window",
+        "option_d": "Call the police"
+      },
+      {
+        "question": "You just moved into a new house, and you feel that items have been moving from their original spot and that you’re being watched. What do you do?",
+        "option_a": "Sell the house, this shit ain’t worth it",
+        "option_b": "Set up hidden cameras to catch whoever or whatever it may be",
+        "option_c": "Hire a priest to cleanse your house",
+        "option_d": "Host a party"
+      }
+    ]
+  }`
+  

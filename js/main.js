@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
   const navigation = document.getElementById("side-nav");
-  const nav_button = document.getElementById("menu-btn");
   const overlay = document.getElementById("overlay")
-  const menu = document.getElementById("popup-menu");
+  const nav_button = document.getElementById("menu-btn");
 
+  // add a toggleNav funtion and use that as the callback function
   nav_button.addEventListener("click", () => {
     navigation.classList.toggle("show");
     overlay.classList.toggle("show");
@@ -14,23 +14,21 @@ document.addEventListener("DOMContentLoaded", () => {
     overlay.classList.toggle("show");
   });
 
-  document.onclick = function(e){
+  document.onclick = (e) => {
     if (!navigation.contains(e.target) && !nav_button.contains(e.target) && navigation.classList.contains("show")) {
         navigation.classList.toggle("show");
         overlay.classList.toggle("show");
     }
   } 
 
-  // add a toggleNav funtion and use that as the callback function
-
+  const menu = document.getElementById("popup-menu");
   document.getElementById("quiz-btn").addEventListener("click", () => {
-    menu.style.height = "100%";
+    menu.classList.toggle("show");
   });
 
   document.querySelector("#popup-menu .close-btn").addEventListener("click", () => {
-    menu.style.height = "0%";
+    menu.classList.toggle("show");
   });
-
 
 }) 
 

@@ -1,0 +1,102 @@
+:root {
+    --red-opt-color: #e13b2e;
+    --blue-opt-color: #4583f2;
+    --yellow-opt-color: #f6bb06;
+    --green-opt-color: #35ab53;
+    --text-bg-color: #fffefaff;
+  }
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#question {
+    text-align: center;
+    font-size: max(3vw, 1.5em);
+    padding-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-bottom: 10px;
+    background-color: var(--text-bg-color);
+    border: 4px solid black;
+    width: 100vw;
+    font-family: Montserrat, sans-serif;
+}
+
+#choices {
+    width: 100vw;
+    flex: 1;
+    border: 4px solid black;
+    border-top: none;
+}  
+
+#choices div {
+    padding-bottom: 10px;
+    padding-left: 5vw;
+}
+
+#submit {
+    position: absolute;
+    bottom: 2vh;
+    right: 5vh;
+    font-size: max(10vw, 5em);
+    float: right;
+    font-family: sans-serif;
+    vertical-align: middle;
+    padding: 0px 10px;
+    background-color: white;
+    border-radius: 20%;
+    cursor: pointer;
+}
+
+/* add hover state
+#submit:hover {
+} */
+
+label {
+    font-size: 4vw;
+}
+
+input[type="radio"] {
+    -webkit-appearance: none;
+    appearance: none;
+    /* For iOS < 15 to remove gradient background */
+    background-color: #fff;
+    width: 5vw;
+    height: 5vw;
+    border: 0.1em solid black;
+    border-radius: 20%;
+    margin-right: 10px;
+    /* align radio better with text */
+    transform: translateY(0.95vw);
+}
+
+input[type="radio"]::before:checked {
+    border: 0.1em solid black;
+    transition: 420ms border ease-in-out;
+}
+  
+input[type="radio"]:checked {
+    border: 0.2em solid black;
+}
+
+input[type="radio"]#option_a {
+    background-color: var(--red-opt-color);
+}
+
+input[type="radio"]#option_b {
+    background-color: var(--yellow-opt-color);
+}
+
+input[type="radio"]#option_c {
+    background-color: var(--green-opt-color);
+}
+
+input[type="radio"]#option_d {
+    background-color: var(--blue-opt-color);
+}

@@ -4,14 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/variables.css">
+    <link rel="stylesheet" href="/css/question.css">
+    <script src="/js/data/questions.json"></script>
+    <script src="/js/quiz.js"></script>
 </head>
 <body>
-    <h1>Here would be the question</h1>
-    <button id="option_a">Choice 1</button>
-    <button id="option_b">Choice 2</button>
-    <button id="option_c">Choice 3</button>
-    <button id="option_d">Choice 4</button>
+    <main>
+        <h1 id="question"></h1>
+        <form id="choices">
+            <div class="option">
+                <input type="radio" id="option_a" name="choice">
+                <label for="option_a"></label>
+            </div>
 
-    <script src="/js/load_questions.js"></script>
+            <div class="option">
+                <input type="radio" id="option_b" name="choice">
+                <label for="option_b"></label>
+            </div>
+
+            <div class="option">
+                <input type="radio" id="option_c" name="choice">
+                <label for="option_c"></label>
+            </div>
+
+            <div class="option">
+                <input type="radio" id="option_d" name="choice">
+                <label for="option_d"></label>
+            </div>
+
+            <button type="submit" id="submit">&#x2192</button>
+        </from>
+        <!-- comment the top and uncommet the bottom to see reference -->
+        <!-- <h1 id="question">You hike in the woods in the evening and see an old house in distance. What do you do?</h1>
+        <form id="choices">
+            <div class="option">
+                <input type="radio" id="option_a" name="choice">
+                <label for="option_a">RUN AWAY!</label>
+            </div>
+
+            <div class="option">
+                <input type="radio" id="option_b" name="choice">
+                <label for="option_b">Enter by yourself</label>
+            </div>
+
+            <div class="option">
+                <input type="radio" id="option_c" name="choice">
+                <label for="option_c">Go get your friends</label>
+            </div>
+
+            <div class="option">
+                <input type="radio" id="option_d" name="choice">
+                <label for="option_d">Survey the House</label>
+            </div>
+
+            <button type="submit" id="submit">&#x2192</button>
+        </from> -->
+    </main>
 </body>
 </html>

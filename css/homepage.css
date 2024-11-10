@@ -1,6 +1,4 @@
 body {
-    min-height: 100vh;
-    min-width: 100vw;
     background-image: url("../images/home_bg.png");
     background-size: cover;
     animation: bounce-background 5s ease-in-out infinite;
@@ -124,8 +122,8 @@ button {
     height: 35px;
     font-size: 1em;
     background-color: var(--yellow-color);
-    transition: background-color 0.2s;
-    transition-timing-function: linear;
+    transition: background-color 0.2s linear;
+    cursor: pointer;
 }
 
 .action-btn:hover {
@@ -141,13 +139,14 @@ button {
 #play-btn {
     border-radius: 20px;
     margin-top: 15px;
-    width: 30%;
-    height: 45px;
+    width: 35%;
+    height: 50px;
     font-size: 2em;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Trebuchet MS', sans-serif;
     background-color: white;
     font-weight: 100;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
 }
 
 /* fix this */
@@ -174,7 +173,7 @@ button {
 }
 
 #popup-menu.show {
-    visibility:visible;
+    height: 100%;
 }
 
 #popup-menu h2 {
@@ -220,6 +219,7 @@ button {
         width: 200px;
     }
 
+    /* source: https://www.w3schools.com/howto/howto_css_overlay.asp */
     #overlay {
         position: fixed; 
         display: none; 
