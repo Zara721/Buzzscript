@@ -1,54 +1,94 @@
 const questions = `{
-    "horror_character": [
+  "horror_character": {
+    "bio": "If you entered a horror movie with a group of friends, what role would you play?",
+    "questions": [
       {
-        "question": "You hike in the woods in the evening and see an old house (worn down clearly abandoned house) in distance. What do you do?",
+        "question": "You hike in the woods in the evening and see an old house in the distance. What do you do?",
         "option_a": "RUN AWAY!",
+        "outcome_a": [["OWK", 2], ["SV", 1]],
         "option_b": "Enter by yourself",
+        "outcome_b": [["F", 2], ["SK", 1]],
         "option_c": "Go get your friends",
-        "option_d": "Survey the House"
+        "outcome_c": [["L", 2], ["FB", 1]],
+        "option_d": "Survey the house",
+        "outcome_d": [["FG", 2], ["TV", 1]]
       },
       {
         "question": "You see a cloaked hitchhiker on the side of the road from your car, gesturing for a ride. What do you do?",
         "option_a": "Slow down to give them a ride",
+        "outcome_a": [["FG", 2], ["TV", 1]],
         "option_b": "Drive past and ignore them",
+        "outcome_b": [["SV", 2]],
         "option_c": "Give them money to get a cab",
-        "option_d": "Wish them well, but be on your way."
+        "outcome_c": [["SK", 2], ["L", 1]],
+        "option_d": "Wish them well, but be on your way.",
+        "outcome_d": [["FB", 2]]
       },
       {
         "question": "The light reflects off the gem of a strange ring at a farmer’s market. Do you…",
         "option_a": "Ask how much the ring is",
+        "outcome_a": [["FG", 2], ["FB", 1], ["L", 1]],
         "option_b": "Feign interest in other items",
+        "outcome_b": [["OWK", 2], ["SK", 1]],
         "option_c": "Snatch the ring when the shopkeeper's distracted",
-        "option_d": "Walk away from the stall"
+        "outcome_c": [["TV", 2], ["F", 1]],
+        "option_d": "Walk away from the stall",
+        "outcome_d": [["SV", 2]]
       },
       {
         "question": "You come across a gothic vintage doll in a thrift store, it’s going for a very low price, it’s still in good condition but has had many previous owners. What do you do?",
         "option_a": "Buy the doll, it’s a steal after all",
+        "outcome_a": [["FG", 2], ["F", 1]],
         "option_b": "Put the thrift store on your blacklist",
+        "outcome_b": [["OWK", 2]],
         "option_c": "Inquire about the doll’s history",
-        "option_d": "Bargain to lower the price even further"
+        "outcome_c": [["FB", 2], ["SK", 1]],
+        "option_d": "Bargain to lower the price even further",
+        "outcome_d": [["TV", 2]]
       },
       {
         "question": "After receiving an old mirror as a farewell gift from your distant aunt, you have been noticing that your reflection is out of sync. What do you do?",
         "option_a": "Smash the mirror, immediately, it’s clearly haunted!",
+        "outcome_a": [["F", 2]],
         "option_b": "Give the mirror away",
+        "outcome_b": [["SK", 2], ["FG", 1]],
         "option_c": "Plant the mirror in the boys locker room",
-        "option_d": "Seek professional advice"
+        "outcome_c": [["TV", 2]],
+        "option_d": "Seek professional advice",
+        "outcome_d": [["L", 2], ["SV", 1]]
       },
       {
         "question": "You’re home alone on a Saturday night, you keep hearing strange noises by the window. What do you do?",
         "option_a": "Go investigate what’s going on",
+        "outcome_a": [["F", 2], ["FG", 1], ["L", 1]],
         "option_b": "Go back to chatting with your friend on your phone",
+        "outcome_b": [["FG", 2]],
         "option_c": "Start videotaping through the window",
-        "option_d": "Call the police"
+        "outcome_c": [["FB", 2], ["TV", 1]],
+        "option_d": "Call the police",
+        "outcome_d": [["SK", 2], ["OWK", 1], ["SV", 1]]
       },
       {
         "question": "You just moved into a new house, and you feel that items have been moving from their original spot and that you’re being watched. What do you do?",
         "option_a": "Sell the house, this shit ain’t worth it",
-        "option_b": "Set up hidden cameras to catch whoever or whatever it may be",
+        "outcome_a": [["OWK", 2]],
+        "option_b": "Set up hidden cameras",
+        "outcome_b": [["SK", 2], ["FB", 1], ["F", 1]],
         "option_c": "Hire a priest to cleanse your house",
-        "option_d": "Host a party"
+        "outcome_c": [["FG", 2]],
+        "option_d": "Host a party",
+        "outcome_d": [["TV", 2], ["FG", 1], ["F", 1]]
       }
-    ]
-  }`
-  
+    ],
+    "outcomes": {
+      "OWK": "The One Who Knows",
+      "SV": "The Survivor",
+      "SK": "The Skeptic",
+      "L": "The Leader",
+      "FB": "The Film Buff",
+      "FG": "The Final Girl",
+      "TV": "The Twist Villain",
+      "F": "The Fool"
+    }
+  }
+}`;

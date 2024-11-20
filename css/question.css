@@ -4,6 +4,7 @@
     --yellow-opt-color: #f6bb06;
     --green-opt-color: #35ab53;
     --text-bg-color: #fffefaff;
+    --option-size: 4vw;
   }
 
 main {
@@ -17,27 +18,35 @@ main {
 
 #question {
     text-align: center;
-    font-size: max(3vw, 1.5em);
-    padding-bottom: 10px;
-    padding-left: 5px;
-    padding-right: 5px;
-    margin-bottom: 10px;
+    font-size: max(3.5vw, 1.5em);
+    padding: 20px;
     background-color: var(--text-bg-color);
     border: 4px solid black;
-    width: 100vw;
-    font-family: Montserrat, sans-serif;
+    font-family: Anton, sans-serif;
+    font-weight: 100;
 }
 
 #choices {
-    width: 100vw;
+    width: calc(100vw - 4px);
     flex: 1;
     border: 4px solid black;
     border-top: none;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-evenly; */
+    gap: 10px;
 }  
 
 #choices div {
-    padding-bottom: 10px;
     padding-left: 5vw;
+    height: 20%;
+}
+
+.option {
+    display: flex;
+    gap: 10px;
+    align-items: center;
 }
 
 #submit {
@@ -48,7 +57,6 @@ main {
     float: right;
     font-family: sans-serif;
     vertical-align: middle;
-    padding: 0px 10px;
     background-color: white;
     border-radius: 20%;
     cursor: pointer;
@@ -59,21 +67,20 @@ main {
 } */
 
 label {
-    font-size: 4vw;
+    font-size: var(--option-size);
 }
 
 input[type="radio"] {
     -webkit-appearance: none;
     appearance: none;
-    /* For iOS < 15 to remove gradient background */
     background-color: #fff;
-    width: 5vw;
-    height: 5vw;
+    aspect-ratio: 1 / 1;
+    height: 80%;
     border: 0.1em solid black;
     border-radius: 20%;
     margin-right: 10px;
     /* align radio better with text */
-    transform: translateY(0.95vw);
+    /* transform: translateY(2vh); */
 }
 
 input[type="radio"]::before:checked {
@@ -99,4 +106,18 @@ input[type="radio"]#option_c {
 
 input[type="radio"]#option_d {
     background-color: var(--blue-opt-color);
+}
+
+/* styles for tablet screens */
+@media only screen and (min-width: 481px)
+and (max-width: 768px) {
+    :root{
+        --option-size: 4vw;
+    }
+}
+
+@media only screen and (max-width:480px) {
+    :root{
+        --option-size: 4vw;
+    }
 }

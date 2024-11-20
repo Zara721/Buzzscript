@@ -24,6 +24,11 @@ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     src: url(../fonts/Montserrat-VariableFont_wght.ttf);
 }
 
+@font-face {
+    font-family: Anton;
+    src: url(../fonts/Anton-Regular.ttf);
+}
+
 body {
     min-height: 100vh;
     min-width: 100vw;
