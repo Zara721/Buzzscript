@@ -53,11 +53,11 @@ main {
     position: absolute;
     bottom: 2vh;
     right: 5vh;
-    font-size: max(10vw, 5em);
+    font-size: max(10vw, 4em);
     float: right;
     font-family: sans-serif;
     vertical-align: middle;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0);
     border-radius: 20%;
     cursor: pointer;
 }
@@ -67,7 +67,8 @@ main {
 } */
 
 label {
-    font-size: var(--option-size);
+    font-size: 4vw;
+    margin-right: 10px;
 }
 
 input[type="radio"] {
@@ -109,15 +110,20 @@ input[type="radio"]#option_d {
 }
 
 /* styles for tablet screens */
-@media only screen and (min-width: 481px)
+/* @media only screen and (min-width: 481px)
 and (max-width: 768px) {
-    :root{
-        --option-size: 4vw;
-    }
-}
+   label {
+    font-size: 6vw;
+   }
+} */
 
-@media only screen and (max-width:480px) {
-    :root{
-        --option-size: 4vw;
+/* common styles for screens and tablets */
+@media only screen and (max-width:768px) {
+    label {
+        font-size: 6vw;
+    }
+
+    input[type="radio"] {
+        height: 70%;
     }
 }
