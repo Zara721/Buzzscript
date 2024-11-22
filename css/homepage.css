@@ -19,6 +19,11 @@ body {
     }
 }
 
+/* fix for phones */
+button {
+    color: black;
+}
+
 nav {
     position: absolute;
     top: 0;
