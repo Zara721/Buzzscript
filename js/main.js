@@ -1,4 +1,7 @@
+
 document.addEventListener("DOMContentLoaded", () => {
+  randomizeUsername()
+  
   const navigation = document.getElementById("side-nav");
   const overlay = document.getElementById("overlay")
   const nav_button = document.getElementById("menu-btn");
@@ -13,24 +16,29 @@ document.addEventListener("DOMContentLoaded", () => {
     overlay.classList.toggle("show");
   }
 
-  const menu = document.getElementById("popup-menu");
-  const quiz_btn = document.getElementById("quiz-btn");
-  const quiz_close_btn = document.querySelector("#popup-menu .close-btn");
-
-  quiz_btn.addEventListener("click", () => {
-    menu.classList.toggle("show");
-  });
-
-  quiz_close_btn.addEventListener("click", () => {
-    menu.classList.toggle("show");
-  });
-
   document.onclick = (e) => {
     if (!navigation.contains(e.target) && !nav_button.contains(e.target) && navigation.classList.contains("show")) {
-      toggleNav()
+      toggleNav();
     } 
   }
 
+  document.getElementById("die").addEventListener("click", randomizeUsername);
+
+  function randomizeUsername(){
+    const anon_usernames = ["Kitty", "Turtle", "Dolphin", "Shark", "Parrot", "Phoenix", "Dinosaur"];
+    const username = document.getElementById("username")
+
+    let randNum = Math.floor(Math.random() * anon_usernames.length);
+    username.value = `Anonymous ${anon_usernames[randNum]}`
+  }
+
+
+
+  // Set up event listener for the qiestion's form submission 
+  document.getElementById("play-btn").addEventListener("click", function(event) {
+    // Get the selected quiz
+    selectedQuiz = document.getElementById('quiz-select').value;
+    window.location.href = `html/basic_question.html?selectedQuiz=${selectedQuiz}`;
+  });
+
 }) 
-
-

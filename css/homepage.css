@@ -69,9 +69,23 @@ nav .close-btn {
     padding-top: 2rem;
     padding-bottom: 1rem;
 }
+
+#menu-btn {
+    top: 0px;
+    font-size:3em;
+    width: 100%;
+    background-color: hsla(0, 0%, 100%, 0.279);
+    text-align: left;
+    padding-left: 15px;
+    padding-top: 5px;
+    border-bottom-left-radius: 10%;
+    cursor: pointer;
+    position: absolute;
+}
    
 main {
     text-align: center;
+    margin-bottom: 3%;
 }
 
 main h1 {
@@ -82,20 +96,23 @@ main h1 {
 }
 
 #profile-pic {
-    height: 200px;
+    height: 180px;
 }
 
-label[for="username"] {
-    font-size: 1.5em;
-    float: left;
+form {
+    margin-top: 7px;
+    padding-bottom: 1.5em;
 }
 
 #username {
-    width: 95%;
-    height: 2em;
+    width: 500px;
+    height: 2.5em;
     border: 2.5px solid black;
     border-radius: 2px;
-    padding: 2px 10px;
+    margin-left: 15px;
+    font-weight: 600;
+    color: black;
+    text-align: center;
 }
 
 /* change the blue bg sometimes */
@@ -103,105 +120,53 @@ label[for="username"] {
     background-color: #f7f7f7;
 }
 
-form {
-    padding-bottom: 1.5em;
-}
-
-button {
-    color: black;
-}
-
-#action-buttons {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.action-btn {
-    width: 47%;
-    height: 35px;
-    font-size: 1em;
-    background-color: var(--yellow-color);
-    transition: background-color 0.2s linear;
+#die {
+    height: 2.3em;
+    position: relative;
+    right: 45px;
     cursor: pointer;
 }
 
-.action-btn:hover {
-    background-color: var(--orange-color);
+#username-section {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
 }
 
-#quiz-btn {
-    border-right: 2.5px solid black;
-    border-left: 2.5px solid black;
+#quiz-play-section{
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    width: 500px;
+    margin-left: 15px;
+}
+
+#quiz-select {
+    height: 2.5em;
+    border-radius: 2px;
+    border: 2.5px solid black;
+    width: 400px;
 }
 
 /* grey until something has been selected */
 #play-btn {
-    border-radius: 20px;
-    margin-top: 15px;
-    width: 35%;
-    height: 50px;
-    font-size: 2em;
+    border-radius: 5px;
+    /* margin-top: 25px; */
+    width: 100px;
+    height: 2.5rem;
+    font-size: 1.8em;
     font-family: 'Trebuchet MS', sans-serif;
-    background-color: white;
+    background-color: var(--yellow-color);
     font-weight: 100;
+    border: 2.5px solid black;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: background-color 0.2s linear;
     cursor: pointer;
 }
 
 /* fix this */
 #play-btn:hover {
-    background-color: rgb(239, 239, 239);
-}
-
-#popup-menu {
-    width: 100%;
-    height: 0;
-    position: fixed;
-    z-index: 1;
-    background-color: #000000de;
-    color: #f7f7f7;
-    left: 0;
-    top: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    overflow: hidden;
-    transition: 0.5s;
-    /* visibility: hidden; */
-}
-
-#popup-menu.show {
-    height: 100%;
-}
-
-#popup-menu h2 {
-    letter-spacing: 2px;
-    font-size: 1.5em;
-    padding-bottom: 10px;
-}
-
-
-#popup-menu .close-btn {
-    float: right;
-    position: absolute;
-    top: 20px;
-    right: 45px;
-    font-size: 60px;
-    font-family: 'Lucida Sans', sans-serif;
-}
-
-#menu-content {
-    margin-top: 30px;
-    width: clamp(200px, 60%, 550px);
-    font-family: Montserrat, sans-serif;
-}
-
-.menu-item {
-    border-bottom: 2.5px solid #f7f7f7;
-    padding-bottom: 0.5em;
-    padding-top: 0.5em;
+    background-color: var(--orange-color);
 }
 
 /* styles for small screens */
@@ -210,8 +175,19 @@ button {
         font-size: 3.6em;
     }
 
-    #profile-pic {
-        height: 180px;
+    #username {
+        width: 300px;
+    }
+
+    #quiz-play-section {
+        width: 310px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #quiz-select {
+        width: 360px;
+        font-size: 0.9em;
     }
 
     /* add a light grey overlay to whole screen */
@@ -239,6 +215,16 @@ button {
 @media only screen and (min-width: 481px)
 and (max-width: 768px) {
 
+    #username {
+        width: 400px;
+    }
+
+    #quiz-play-section {
+        width: 410px;
+        flex-direction: column;
+        align-items: center;
+    }
+
     #side-nav.show {
         width: 250px;
     }
@@ -248,5 +234,10 @@ and (max-width: 768px) {
 @media only screen and (max-width:768px) {
     nav {
         left: 0;
+    }
+
+    #menu-btn {
+        text-align: right;
+        padding-right: 15px;
     }
 }

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BuzzScript</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/homepage.css">
@@ -20,47 +21,31 @@
           <li><a href="#">Log In</a></li>
         </ul>
     </nav>
+    <button type="button" id="menu-btn"><i class="fas fa-bars"></i></button>
     <main>
         <h1>BuzzScript</h1>
         <img src="images/profile.png" alt="profile picture" id="profile-pic">
-        <form>
-            <label for="username">Username</label>
-            <input type="text" id="username" name="username" autofocus>
+
+        <!-- use form for submitting quiz -->
+        <form id="user-info">
+
+            <div id="username-section">
+                <input type="text" id="username" name="username" disabled>
+                <img src="images/die.svg" alt="die" id="die">
+            </div>
+
+            <div id="quiz-play-section">
+                <select name="quizzess" id="quiz-select">
+                    <option value="horror_character">If you entered a horror movie, what role would you play?</option>
+                    <option value="pidgeon">What pidgeon are you based on the bread you like?</option>
+                    <option value="novel">If you were in a novel, what archetype would you be?</option>
+                    <option value="murder">Would you be able to get away with murder?</option>
+                    <option value="interior_design">Which interior design style suits you best?</option>
+                </select>
+                <button type="button" id="play-btn">PLAY</button>
+            </div>
+
         </form>
-        <div id="action-buttons">
-            <button type="button" class="action-btn" id="game-btn">MINIGAME</button>
-            <button type="button" class="action-btn" id="quiz-btn">QUIZ</button>
-            <button type="button" class="action-btn" id="menu-btn">MENU</button>
-        </div>
-        <button type="button" id="play-btn">PLAY</button>
     </main>
-    <div id="popup-menu">
-        <div id="menu-content">
-            <h2>QUIZZES</h2>
-            <button type="button"class="close-btn">&times;</button>
-            <ul id="menu-items">
-                <li class="menu-item">
-                    <h5>Quiz Name</h5>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
-                </li>
-                <li class="menu-item">
-                    <h5>Quiz Name</h5>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
-                </li>
-                <li class="menu-item">
-                    <h5>Quiz Name</h5>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
-                </li>
-                <li class="menu-item">
-                    <h5>Quiz Name</h5>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
-                </li>
-                <li class="menu-item">
-                    <h5>Quiz Name</h5>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
-                </li>
-            </ul>
-        </div>
-    </div>
 </body>
 </html>
