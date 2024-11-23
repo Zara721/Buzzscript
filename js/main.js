@@ -1,7 +1,7 @@
 
 document.addEventListener("DOMContentLoaded", () => {
   randomizeUsername()
-  
+
   const navigation = document.getElementById("side-nav");
   const overlay = document.getElementById("overlay")
   const nav_button = document.getElementById("menu-btn");
@@ -25,7 +25,8 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("die").addEventListener("click", randomizeUsername);
 
   function randomizeUsername(){
-    const anon_usernames = ["Kitty", "Turtle", "Dolphin", "Shark", "Parrot", "Phoenix", "Dinosaur"];
+    const anon_usernames = ["Kitty", "Turtle", "Dolphin", "Shark", "Parrot", "Dinosaur", "Lizard", "Milk"];
+    //existential turtle, stupid shark
     const username = document.getElementById("username")
 
     let randNum = Math.floor(Math.random() * anon_usernames.length);

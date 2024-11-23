@@ -32,6 +32,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const currentQuestions = currentQuiz.questions[currentQuestionIndex];
         let outcome_array = currentQuestions[chosen_outcome];
 
+        console.log(outcome_array)
+
         outcome_array.forEach(([outcome, points]) => {
             if (outcome in outcomeDict) {
                 outcomeDict[outcome] += parseInt(points);
@@ -51,6 +53,9 @@ document.addEventListener("DOMContentLoaded", () => {
             const selectedAnswer = selectedOption.nextElementSibling.textContent;
             console.log(`You selected: ${selectedAnswer}`);
 
+            const chosen_outcome = selectedOption.id.replace("option", "outcome")
+            updateOutcome(chosen_outcome)
+
             currentQuestionIndex++;
             currentQuestionIndex >= currentQuiz.questions.length ? showResults() : loadQuestion();
         } else {
@@ -62,6 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     function showResults() {
+        console.log(outcomeDict)
         const highestOutcome = Object.keys(outcomeDict).reduce((a, b) => outcomeDict[a] > outcomeDict[b] ? a : b);
         const resultMessage = `Thanks for playing. You got ${currentQuiz.outcomes[highestOutcome]}.`;
         document.getElementById("question").textContent = resultMessage;
