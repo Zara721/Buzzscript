@@ -40,7 +40,7 @@ main {
 
 #choices div {
     padding-left: 5vw;
-    height: 20%;
+    height: 23%;
 }
 
 .option {
@@ -50,18 +50,23 @@ main {
 }
 
 #submit {
-    position: absolute;
+    /* position: absolute;
     bottom: 2vh;
-    right: 5vh;
+    right: 5vh; */
+    text-align: right;
+    padding-right: 15px;
     font-size: max(10vw, 4em);
     float: right;
     font-family: sans-serif;
-    vertical-align: middle;
     background-color: rgba(255, 255, 255, 0);
-    border-radius: 20%;
     cursor: pointer;
 }
 
+#submit img {
+    height: 10vh;
+    padding-right: 5px;
+    padding-bottom: 15px;
+}
 /* add hover state
 #submit:hover {
 } */
@@ -76,7 +81,7 @@ input[type="radio"] {
     appearance: none;
     background-color: #fff;
     aspect-ratio: 1 / 1;
-    height: 80%;
+    height: 85%;
     border: 0.1em solid black;
     border-radius: 20%;
     margin-right: 10px;
@@ -117,8 +122,20 @@ and (max-width: 768px) {
    }
 } */
 
-/* common styles for screens and tablets */
-@media only screen and (max-width:768px) {
+/* styles for small screens */
+@media only screen and (max-width:480px) {
+    input[type="radio"] {
+        aspect-ratio:unset;
+        width: 12px;
+        border-radius: 3px;
+    }
+
+}
+
+
+/* styles for tablet screens */
+@media only screen and (min-width: 481px)
+and (max-width: 768px) {
     label {
         font-size: 6vw;
     }
