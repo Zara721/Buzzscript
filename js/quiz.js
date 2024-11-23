@@ -32,14 +32,11 @@ document.addEventListener("DOMContentLoaded", () => {
         const currentQuestions = currentQuiz.questions[currentQuestionIndex];
         let outcome_array = currentQuestions[chosen_outcome];
 
-        console.log(outcome_array)
-
         outcome_array.forEach(([outcome, points]) => {
             if (outcome in outcomeDict) {
                 outcomeDict[outcome] += parseInt(points);
             }
         });
-        console.log(outcomeDict)
     }
 
     // Set up event listener for the qiestion's form submission 
@@ -69,9 +66,11 @@ document.addEventListener("DOMContentLoaded", () => {
     function showResults() {
         console.log(outcomeDict)
         const highestOutcome = Object.keys(outcomeDict).reduce((a, b) => outcomeDict[a] > outcomeDict[b] ? a : b);
-        const resultMessage = `Thanks for playing. You got ${currentQuiz.outcomes[highestOutcome]}.`;
-        document.getElementById("question").textContent = resultMessage;
-        document.getElementById("choices").style.display = "none";
+        window.location.href = `quiz_outcome.html?highestOutcome=${highestOutcome}&selectedQuiz=${selectedQuiz}`;
+
+        // const resultMessage = `Thanks for playing. You got ${currentQuiz.outcomes[highestOutcome][0]}.`;
+        // document.getElementById("question").textContent = resultMessage;
+        // document.getElementById("choices").style.display = "none";
     }
 
 })
