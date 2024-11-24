@@ -1,8 +1,8 @@
 
 document.addEventListener("DOMContentLoaded", () => {
-    console.log(`dom wormking`);
     let selectedQuiz = new URLSearchParams(window.location.search).get('selectedQuiz');
     console.log(selectedQuiz);
+
     //load data from the JSON file
     const questions_json = JSON.parse(questions);
     const currentQuiz = questions_json[selectedQuiz];
@@ -10,21 +10,57 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const outcomes = Object.keys(currentQuiz.outcomes);
     const outcomeDict = outcomes.reduce((acc, key) => ({...acc, [key]: 0}), {});
-    console.log(outcomeDict)
+    console.log(outcomeDict);
+
+    const optionType = currentQuiz.option_type;
+    console.log(optionType);
+
+    if (optionType == "images") {
+        //change the css to add classes that show images appropriately
+        document.getElementById("choices").classList.add("images");
+
+        const optionElements = document.querySelectorAll(".option");
+        optionElements.forEach(element => {
+            element.classList.add("images")
+        })
+
+        const radioElements = document.querySelectorAll(`input[type="radio"]`)
+        radioElements.forEach(element => {
+            element.classList.add("images")
+        })
+
+        const labelElements = document.querySelectorAll("label");
+        labelElements.forEach(element => {
+            element.classList.add("images")
+
+            //add img elements to label
+            const imgElement = document.createElement("img");
+            element.appendChild(imgElement)
+        })
+
+    }
 
     loadQuestion();
 
     function loadQuestion() {
         const currentQuestions = currentQuiz.questions[currentQuestionIndex];
         document.getElementById("question").textContent = currentQuestions.question;
-    
+
         const options = ['a', 'b', 'c', 'd'];
+
         options.forEach(option => {
-            const optionElement = document.querySelector(`label[for='option_${option}']`);
-            if (optionElement) {
-                optionElement.textContent = currentQuestions[`option_${option}`];
+            const labelElement = document.querySelector(`label[for='option_${option}']`);
+            const optionText = currentQuestions[`option_${option}`]
+
+            if (labelElement) {
+                if (optionType == "text") {
+                    labelElement.textContent = optionText;
+                } else if (optionType == "images")  {
+                    const imgElement = document.querySelector(`label[for='option_${option}'] img`)
+                    imgElement.src = `../question_images/${selectedQuiz}/${currentQuestionIndex}/${optionText}`                }
             }
         });
+
     }
     
     function updateOutcome(chosen_outcome) {
@@ -59,18 +95,14 @@ document.addEventListener("DOMContentLoaded", () => {
             alert("Please select an option.");
         }
 
-        const form = document.getElementById("choices")
-        form.reset()
+        const form = document.getElementById("choices");
+        form.reset();
     });
 
     function showResults() {
         console.log(outcomeDict)
         const highestOutcome = Object.keys(outcomeDict).reduce((a, b) => outcomeDict[a] > outcomeDict[b] ? a : b);
         window.location.href = `quiz_outcome.html?highestOutcome=${highestOutcome}&selectedQuiz=${selectedQuiz}`;
-
-        // const resultMessage = `Thanks for playing. You got ${currentQuiz.outcomes[highestOutcome][0]}.`;
-        // document.getElementById("question").textContent = resultMessage;
-        // document.getElementById("choices").style.display = "none";
     }
 
 })

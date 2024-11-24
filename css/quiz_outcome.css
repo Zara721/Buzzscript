@@ -1,25 +1,35 @@
 
 body {
-    background-color: #f7f7f7;
+    background-image: url("../images/home_bg.png");
+    background-size:cover;
+    animation: bounce-background 5s ease-in-out infinite;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+@keyframes bounce-background {
+    from {
+        background-position: top;
+    }
+    50% {
+        background-position: bottom;
+    }
+    to {
+        background-position: top;
+    }
+}
+
+
 main {
     background-image: linear-gradient(to bottom right, var(--orange-color), var(--yellow-color));
     width: 50vw;
     color: #f7f7f7;
-    /* display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; */
     border-radius: 5px;
     padding: 15px;
 }
 
 main h1 {
-    /* font-size: 1.5em; */
     padding: 5px 5px 0px 15px;
 }
 

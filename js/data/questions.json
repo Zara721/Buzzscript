@@ -1,6 +1,7 @@
 const questions = `{
   "horror_character": {
     "bio": "If you entered a horror movie, what role would you play?",
+    "option_type": "text",
     "questions": [
       {
         "question": "You hike in the woods in the evening and see an old house in the distance. What do you do?",
@@ -90,5 +91,165 @@ const questions = `{
       "TV": ["The Twist Villain", "You have a dark side, and it might just surprise everyone.", "twist_villain.jpg"],
       "F": ["The Fool", "Your antics provide levity, but they might also seal your fate.", "fool.png"]
     }
-  }
+  },
+  
+  "murder": {
+      "bio": "Can you get away with murder?",
+      "outcomes": {
+        "CI": ["Criminally Inept", "A life of crime was not meant to be.", "criminally_inept.png"],
+        "LH": ["In for the Long Haul", "You're in it for the long ride, leading a life on the run with no end in sight, consequences be damned.", "long_haul.avif"],
+        "TCI": ["True Crime Infamy", "You’ve become a legend in the criminal underworld that is true crime podcasts.", "true_crime.png"],
+        "ST": ["Silver Tongue", "With a sweet mouth and a disarming smile, the world knows nothing of your evil.", "silver_tongue.jpg"],
+        "DMT": ["Dead Men Tell No Tales", "Two can keep a secret if one of them is dead.", "no_tales.png"]
+      },
+      "option_type": "text",
+      "questions": [
+        {
+          "question": "You've just committed a crime. How do you deal with the murder weapon?",
+          "option_a": "Bury the weapon in the woods",
+          "outcome_a": [["LH", 2]],
+          "option_b": "Melt and recast the weapon",
+          "outcome_b": [["DMT", 2]],
+          "option_c": "Throw the weapon in the trash",
+          "outcome_c": [["CI", 2]],
+          "option_d": "Send the weapon with a ransom note to the victim's family",
+          "outcome_d": [["ST", 2], ["TCI", 2]]
+        },
+        {
+          "question": "You’ve got a dead body and a bloody carpet to deal with. What do you do?",
+          "option_a": "Throw the body into the river",
+          "outcome_a": [["CI", 1]],
+          "option_b": "Stuff the body in your basement freezer",
+          "outcome_b": [["TCI", 2], ["LH", 2]],
+          "option_c": "Cut up the body and slowly dispose of the parts",
+          "outcome_c": [["DMT", 2]],
+          "option_d": "Plant the body and wash your hands of the matter",
+          "outcome_d": [["ST", 1]]
+        },
+        {
+          "question": "An alleged witness claims they saw you near the crime scene. What do you do?",
+          "option_a": "Make plans to flee the city",
+          "outcome_a": [["LH", 2]],
+          "option_b": "Bide your time, human memory is a fickle thing",
+          "outcome_b": [["ST", 1]],
+          "option_c": "Bribe them to remain silent",
+          "outcome_c": [["CI", 1]],
+          "option_d": "Eliminate the witness",
+          "outcome_d": [["DMT", 2], ["CI", 2], ["TCI", 2]]
+        },
+        {
+          "question": "Investigators knock on your door asking questions. How do you respond?",
+          "option_a": "Invite them in and fully cooperate",
+          "outcome_a": [["LH", 2], ["TCI", 1]],
+          "option_b": "Pretend that you're not home",
+          "outcome_b": [["CI", 1]],
+          "option_c": "Feign ignorance and express your condolences",
+          "outcome_c": [["ST", 2]],
+          "option_d": "Refuse to let them in",
+          "outcome_d": [["DMT", 1]]
+        },
+        {
+          "question": "An anonymous message arrives, claiming that they know what you did. What do you do?",
+          "option_a": "Immediately prepare to flee town",
+          "outcome_a": [["LH", 2]],
+          "option_b": "Offer to buy their silence",
+          "outcome_b": [["TCI", 1], ["CI", 1]],
+          "option_c": "Ignore the message and lie low",
+          "outcome_c": [["DMT", 1], ["ST", 1]],
+          "option_d": "Confess and negotiate a plea deal",
+          "outcome_d": [["CI", 3]]
+        },
+        {
+          "question": "You overhear the police discussing the case in a diner. What do you do?",
+          "option_a": "Approach and strike up a conversation",
+          "outcome_a": [["ST", 2]],
+          "option_b": "Leave the premises as soon as the opportunity arises",
+          "outcome_b": [["LH", 2], ["CI", 1]],
+          "option_c": "Eavesdrop on their conversation for potential info",
+          "outcome_c": [["TCI", 2]],
+          "option_d": "Cut their brake lines",
+          "outcome_d": [["DMT", 2]]
+        },
+        {
+          "question": "A partner in crime starts to panic and threatens to turn you in. What do you do?",
+          "option_a": "Betray them first and frame them for your own actions",
+          "outcome_a": [["ST", 2]],
+          "option_b": "Threaten the safety of them and their loved ones",
+          "outcome_b": [["LH", 2], ["DMT", 2], ["CI", 2]],
+          "option_c": "Dispose of your so-called partner in crime",
+          "outcome_c": [["DMT", 3], ["TCI", 2]],
+          "option_d": "Reassure them through paying them off",
+          "outcome_d": [["CI", 2]]
+        }
+      ]
+    },
+    "witch": {
+      "bio": "If you were a witch, what ability would you have?",
+      "outcomes": {
+        "CW": ["Cat Whisperer", "You have an uncanny connection with cats, and they will follow you wherever you go.", "cats.jpg"],
+        "AE": ["All-Seeing Eyes", "Your eyes can pierce through the veil of reality, breaking the temporal plane. Nothing can escape your gaze.", "eyes.jpg"],
+        "PA": ["Plant Affinity", "You can make gardens bloom in the most unlikely of places.", "plant.jpg"],
+        "PY": ["Pyromancy", "You can control fire with ease, whether it's a small flicker or an uncontrollable blaze is for you to decide.", "pyro.jpg"],
+        "SM": ["Summoner", "You can summon creatures from other realms to do your bidding, from small familiars to powerful beings.", "summoner.jpg"]
+      },
+      "option_type": "images",
+      "questions": [
+        {
+          "question": "Pick a lair",
+          "option_a": "nice_house.jpg",
+          "outcome_a": [["CW", 2]],
+          "option_b": "plant_house.jpg",
+          "outcome_b": [["PA", 2]],
+          "option_c": "smoky_house.jpg",
+          "outcome_c": [["SM", 2], ["AE", 1]],
+          "option_d": "spooky_house.jpg",
+          "outcome_d": [["AE", 2], ["PY", 2], ["CW", 1]]
+        },
+        {
+          "question": "Pick a familiar",
+          "option_a": "fox_familiar.jpg",
+          "outcome_a": [["PY", 2]],
+          "option_b": "owl_familiar.jpg",
+          "outcome_b": [["PA", 2], ["SM", 2], ["AE", 2]],
+          "option_c": "raven_familiar.jpg",
+          "outcome_c": [["SM", 2], ["PY", 1]],
+          "option_d": "cat_familiar.jpg",
+          "outcome_d": [["CW", 3], ["AE", 2], ["PA", 1]]
+        },
+        {
+          "question": "Pick an element",
+          "option_a": "air_element.jpg",
+          "outcome_a": [["CW", 2], ["AE", 3]],
+          "option_b": "earth_element.jpg",
+          "outcome_b": [["PA", 3], ["SM", 1]],
+          "option_c": "fire_element.jpg",
+          "outcome_c": [["PY", 3]],
+          "option_d": "water_element.jpg",
+          "outcome_d": [["SM", 2]]
+        },
+        {
+          "question": "Pick an element",
+          "option_a": "teal_potion.jpg",
+          "outcome_a": [["AE", 2], ["SM", 2]],
+          "option_b": "red_potion.jpg",
+          "outcome_b": [["PY", 2]],
+          "option_c": "plant_potion.jpg",
+          "outcome_c": [["PA", 2]],
+          "option_d": "sleep_potion.jpg",
+          "outcome_d": [["CW", 2]]
+        },
+        {
+          "question": "Pick a ritual",
+          "option_a": "ritual_a.jpg",
+          "outcome_a": [["PY", 2], ["CW", 2]],
+          "option_b": "ritual_b.jpg",
+          "outcome_b": [["SM", 2]],
+          "option_c": "ritual_c.jpg",
+          "outcome_c": [["PA", 2]],
+          "option_d": "ritual_d.jpg",
+          "outcome_d": [["AE", 2]]
+        }
+      ]
+    }
+  
 }`;

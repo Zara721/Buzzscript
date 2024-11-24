@@ -24,6 +24,7 @@ main {
     border: 4px solid black;
     font-family: Anton, sans-serif;
     font-weight: 100;
+    min-width: 100%;
 }
 
 #choices {
@@ -38,15 +39,28 @@ main {
     gap: 10px;
 }  
 
-#choices div {
-    padding-left: 5vw;
-    height: 21%;
+#choices.images {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
 }
 
 .option {
     display: flex;
     gap: 10px;
     align-items: center;
+    padding-left: 5vw;
+    height: 21%;
+}
+
+.option.images {
+    flex-direction: column-reverse;
+    height: 70%;
+    padding-left: 0vw;
+    max-width: 23vw;
+    gap: 0px;
+    justify-content: center;
 }
 
 #submit {
@@ -64,13 +78,23 @@ main {
 #submit img {
     height: 10vh;
 }
-/* add hover state
-#submit:hover {
-} */
 
 label {
     font-size: 4vw;
     margin-right: 10px;
+}
+
+label.images {
+    margin-right: 0;
+    height: 50vh;
+}
+
+label img {
+    height: 50vh;
+    width: min(20vw, 250px);
+    object-fit: fill;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 
 input[type="radio"] {
@@ -82,9 +106,18 @@ input[type="radio"] {
     border: 0.1em solid black;
     border-radius: 20%;
     margin-right: 10px;
-    /* align radio better with text */
-    /* transform: translateY(2vh); */
 }
+
+input[type="radio"].images {
+    width: min(20vw, 250px);
+    height: 100%;
+    aspect-ratio: unset;
+    margin: 0;
+    border-radius: 0;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
 
 input[type="radio"]::before:checked {
     border: 0.1em solid black;
@@ -111,6 +144,21 @@ input[type="radio"]#option_d {
     background-color: var(--blue-opt-color);
 }
 
+input[type="radio"]#option_a.images {
+    background-color: var(--text-bg-color);
+}
+
+input[type="radio"]#option_b.images {
+    background-color: var(--text-bg-color);
+}
+
+input[type="radio"]#option_c.images {
+    background-color: var(--text-bg-color);
+}
+
+input[type="radio"]#option_d.images {
+    background-color: var(--text-bg-color);
+}
 
 /* styles for small screens */
 @media only screen and (max-width:480px) {
