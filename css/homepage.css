@@ -20,7 +20,7 @@ body {
 }
 
 /* fix for phones */
-button {
+button, select {
     color: black;
 }
 
