@@ -8,7 +8,7 @@ const questions = `{
         "option_a": "RUN AWAY!",
         "outcome_a": [["OWK", 2], ["SV", 1]],
         "option_b": "Enter by yourself",
-        "outcome_b": [["F", 2], ["SK", 1]],
+        "outcome_b": [["F", 2], ["SK", 1], ["TV", 2]],
         "option_c": "Go get your friends",
         "outcome_c": [["L", 2], ["FB", 1]],
         "option_d": "Survey the house",
@@ -17,11 +17,11 @@ const questions = `{
       {
         "question": "You see a cloaked hitchhiker on the side of the road from your car, gesturing for a ride. What do you do?",
         "option_a": "Slow down to give them a ride",
-        "outcome_a": [["FG", 2], ["TV", 1]],
+        "outcome_a": [["FG", 2], ["TV", 2]],
         "option_b": "Drive past and ignore them",
         "outcome_b": [["SV", 2]],
         "option_c": "Give them money to get a cab",
-        "outcome_c": [["SK", 2], ["L", 1]],
+        "outcome_c": [["SK", 2], ["L", 2]],
         "option_d": "Wish them well, but be on your way.",
         "outcome_d": [["FB", 2]]
       },
@@ -43,7 +43,7 @@ const questions = `{
         "option_b": "Put the thrift store on your blacklist",
         "outcome_b": [["OWK", 2]],
         "option_c": "Inquire about the doll’s history",
-        "outcome_c": [["FB", 2], ["SK", 1]],
+        "outcome_c": [["FB", 2], ["SK", 2]],
         "option_d": "Bargain to lower the price even further",
         "outcome_d": [["TV", 2]]
       },
