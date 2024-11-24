@@ -25,7 +25,8 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("die").addEventListener("click", randomizeUsername);
 
   function randomizeUsername(){
-    const anon_usernames = ["Kitty", "Turtle", "Dolphin", "Shark", "Parrot", "Dinosaur", "Lizard", "Milk"];
+    const anon_usernames = ["Kitty", "Turtle", "Dolphin", "Shark", "Parrot", "Dinosaur", "Lizard", "Milk", "Axolotl", "Panther"];
+    
     //existential turtle, stupid shark
     const username = document.getElementById("username")
 
