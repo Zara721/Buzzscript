@@ -98,6 +98,7 @@ main h1 {
     font-family: Montserrat;
     font-weight: 400;
     color: var(--yellow-color);
+    padding: 0px 15px;
 }
 
 #profile-pic {
