@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function randomizeUsername(){
     const anon_usernames = ["Kitty", "Turtle", "Dolphin", "Shark", "Parrot", "Dinosaur", "Lizard", "Milk", "Axolotl", "Panther"];
-    
+
     //existential turtle, stupid shark
     const username = document.getElementById("username")
 
@@ -39,8 +39,16 @@ document.addEventListener("DOMContentLoaded", () => {
   // Set up event listener for the qiestion's form submission 
   document.getElementById("play-btn").addEventListener("click", function(event) {
     // Get the selected quiz
-    selectedQuiz = document.getElementById('quiz-select').value;
-    window.location.href = `html/basic_question.html?selectedQuiz=${selectedQuiz}`;
+    const quizSelect = document.getElementById('quiz-select');
+    const selectedQuiz = quizSelect.value;
+
+    const selectedOption = quizSelect.options[quizSelect.selectedIndex];
+    let quiz_page = "basic_question";
+    if (selectedOption.dataset.timed == "true") {
+      quiz_page = "timed_questions";
+    }
+
+    window.location.href = `html/${quiz_page}.html?selectedQuiz=${selectedQuiz}`;
   });
 
 }) 

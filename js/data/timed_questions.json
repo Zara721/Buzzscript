@@ -1,0 +1,29 @@
+const questions = `{
+"countries": {
+    "bio": "How many countries can you name in a minute?",
+    "answer_type": "countries",
+    "answer_list":[
+        ["Afghanistan"], ["Albania"], ["Algeria"], ["Andorra"], ["Angola"], ["Antigua and Barbuda"], ["Argentina"], ["Armenia"], ["Australia"],
+        ["Austria"], ["Azerbaijan"], ["Bahamas"], ["Bahrain"], ["Bangladesh"], ["Barbados"], ["Belarus"], ["Belgium"], ["Belize"], ["Benin"],
+        ["Bhutan"], ["Bolivia", "Plurinational State of Bolivia"], ["Bosnia and Herzegovina", "Bosnia"], ["Botswana"], ["Brazil", "Brasil"], ["Brunei", "Nation of Brunei, the Abode of Peace"], ["Bulgaria"], ["Burkina Faso"], ["Burundi"], ["Cabo Verde", "Cape Verde"],
+        ["Cambodia", "Kampuchea"], ["Cameroon"], ["Canada"], ["Central African Republic", "CAR"], ["Chad"], ["Chile"], ["China", "People's Republic of China"], ["Colombia"], ["Comoros"], ["Congo", "Democratic Republic of the Congo", "Congo-Kinshasa", "Republic of Congo", "Congo-Brazzaville"],
+        ["Costa Rica"], ["Croatia", "Hrvatska"], ["Cuba"], ["Cyprus"], ["Czechia", "Czech Republic"], ["Denmark"], ["Djibouti"], ["Dominica"], ["Dominican Republic"], ["Ecuador"],
+        ["Egypt"], ["El Salvador"], ["Equatorial Guinea"], ["Eritrea"], ["Estonia"], ["Eswatini", "Swaziland"], ["Ethiopia"], ["Fiji"], ["Finland"], ["France"],
+        ["Gabon"], ["Gambia"], ["Georgia"], ["Germany", "Deutschland"], ["Ghana"], ["Greece", "Hellas"], ["Grenada"], ["Guatemala"], ["Guinea"], ["Guinea-Bissau"],
+        ["Guyana"], ["Haiti"], ["Holy See", "Vatican City", "Vatican"], ["Honduras"], ["Hungary", "Magyarország"], ["Iceland"], ["India", "Bharat"], ["Indonesia"], ["Iran", "Islamic Republic of Iran"], ["Iraq"],
+        ["Ireland", "Republic of Ireland", "Éire"], ["Israel"], ["Italy", "Italia"], ["Jamaica"], ["Japan", "Nihon", "Nippon"], ["Jordan"], ["Kazakhstan"], ["Kenya"], ["Kiribati"], ["North Korea", "Democratic People's Republic of Korea", "DPRK"],
+        ["South Korea", "Republic of Korea", "ROK"], ["Kosovo"], ["Kuwait"], ["Kyrgyzstan"], ["Laos", "Lao People's Democratic Republic"], ["Latvia"], ["Lebanon"], ["Lesotho"], ["Liberia"], ["Libya"],
+        ["Liechtenstein"], ["Lithuania"], ["Luxembourg"], ["Madagascar"], ["Malawi"], ["Malaysia"], ["Maldives"], ["Mali"], ["Malta"], ["Marshall Islands"],
+        ["Mauritania"], ["Mauritius"], ["Mexico", "México"], ["Micronesia", "Federated States of Micronesia"], ["Moldova"], ["Monaco"], ["Mongolia"], ["Montenegro"], ["Morocco"], ["Mozambique"],
+        ["Myanmar", "Burma"], ["Namibia"], ["Nauru"], ["Nepal"], ["Netherlands", "Holland"], ["New Zealand"], ["Nicaragua"], ["Niger"], ["Nigeria"], ["North Macedonia", "Macedonia"],
+        ["Norway"], ["Oman"], ["Pakistan"], ["Palau"], ["Palestine State", "Palestine", "State of Palestine"], ["Panama"], ["Papua New Guinea"], ["Paraguay"], ["Peru"], ["Philippines"],
+        ["Poland", "Polska"], ["Portugal"], ["Qatar"], ["Romania", "România"], ["Russia", "Russian Federation"], ["Rwanda"], ["Saint Kitts and Nevis"], ["Saint Lucia"], ["Saint Vincent and the Grenadines"], ["Samoa"],
+        ["San Marino"], ["Sao Tome and Principe"], ["Saudi Arabia"], ["Senegal"], ["Serbia"], ["Seychelles"], ["Sierra Leone"], ["Singapore"], ["Slovakia", "Slovak Republic"], ["Slovenia"],
+        ["Solomon Islands"], ["Somalia"], ["South Africa"], ["South Sudan"], ["Spain", "España"], ["Sri Lanka"], ["Sudan"], ["Suriname"], ["Sweden"], ["Switzerland", "Swiss Confederation"],
+        ["Syria", "Syrian Arab Republic"], ["Tajikistan"], ["Tanzania", "United Republic of Tanzania"], ["Thailand"], ["Timor-Leste", "East Timor"], ["Togo"], ["Tonga"], ["Trinidad and Tobago"], ["Tunisia"], ["Turkey", "Türkiye"],
+        ["Turkmenistan"], ["Tuvalu"], ["Uganda"], ["Ukraine"], ["United Arab Emirates", "UAE"], ["United Kingdom", "UK", "Britain", "Great Britain", "England"], ["United States", "United States of America", "America", "USA", "US"], ["Uruguay"], ["Uzbekistan"], ["Vanuatu"],
+        ["Venezuela"], ["Vietnam", "Viet Nam"], ["Yemen"], ["Zambia"], ["Zimbabwe"]
+    ]
+    
+    }
+}`

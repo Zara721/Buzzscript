@@ -129,8 +129,8 @@ form {
 #die {
     height: 2.3em;
     position: relative;
-    right: 60px;
-    bottom: 50px;
+    left: 225px;
+    bottom: 115px;
     cursor: pointer;
 }
 
@@ -191,7 +191,7 @@ form {
 
     #die {
         left: 155px;
-        bottom: 146px;
+        bottom: 160px;
     }
 
     /* add a light grey overlay to whole screen */
@@ -230,8 +230,8 @@ and (max-width: 768px) {
     }
 
     #die {
-        left: 175px;
-        bottom: 150px;
+        left: 162px;
+        bottom: 165px;
     }
 
     #side-nav.show {
@@ -247,5 +247,6 @@ and (max-width: 768px) {
 
     #menu-btn {
         text-align: right;
+        margin-right: 20px;
     }
 }

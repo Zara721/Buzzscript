@@ -57,7 +57,8 @@ document.addEventListener("DOMContentLoaded", () => {
                     labelElement.textContent = optionText;
                 } else if (optionType == "images")  {
                     const imgElement = document.querySelector(`label[for='option_${option}'] img`)
-                    imgElement.src = `../question_images/${selectedQuiz}/${currentQuestionIndex}/${optionText}`                }
+                    imgElement.src = `../question_images/${selectedQuiz}/${currentQuestionIndex}/${optionText}`                
+                }
             }
         });
 
