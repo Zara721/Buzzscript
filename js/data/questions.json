@@ -250,6 +250,97 @@ const questions = `{
           "outcome_d": [["AE", 2]]
         }
       ]
+    },
+    "pigeon": {
+    "bio": "Choose some bread and figure out what kind of pigeon you are!",
+    "outcomes": {
+      "EC": ["Elegant Crest", "You are a poised and stylish pigeon, strutting with confidence.", "elegant_crest.jpg"],
+      "OD": ["Oddball Dove", "You march to your own beat, a unique pigeon in every way.", "oddball_dove.jpg"],
+      "RW": ["Rustic Wing", "You are grounded and dependable, with a love for the simple things.", "rustic_wing.jpg"],
+      "BP": ["Bold Plume", "Fearless and vibrant, you stand out wherever you go.", "bold_plume.jpg"],
+      "RP": ["Regal Plumage", "You have a majestic air about you, turning heads with your royal demeanor.", "regal_plumage.jpg"],
+      "FS": ["Free Spirit", "A nomadic soul, you are always exploring and chasing the horizon.", "free_spirit.jpg"]
+    },
+    "option_type": "images",
+    "questions": [
+      {
+        "question": "Choose a type of bread",
+        "option_a": "Sourdough",
+        "outcome_a": [["RW", 2], ["FS", 1]],
+        "option_b": "English muffin",
+        "outcome_b": [["EC", 2], ["BP", 1]],
+        "option_c": "Banana bread",
+        "outcome_c": [["RP", 2], ["EC", 1]],
+        "option_d": "Brioche",
+        "outcome_d": [["OD", 2], ["RW", 1]]
+      },
+      {
+        "question": "Choose a type of bread",
+        "option_a": "White bread",
+        "outcome_a": [["BP", 2], ["RP", 1]],
+        "option_b": "Flat bread",
+        "outcome_b": [["FS", 2], ["OD", 1]],
+        "option_c": "Baguette",
+        "outcome_c": [["RW", 2], ["EC", 1]],
+        "option_d": "Bagel",
+        "outcome_d": [["EC", 2]]
+      },
+      {
+        "question": "Choose a type of bread",
+        "option_a": "Beer bread",
+        "outcome_a": [["EC", 2], ["RP", 1]],
+        "option_b": "Biscuits",
+        "outcome_b": [["BP", 2], ["RW", 1]],
+        "option_c": "Brown bread",
+        "outcome_c": [["RP", 2], ["FS", 1]],
+        "option_d": "Ciabatta",
+        "outcome_d": [["OD", 2], ["BP", 1]]
+      },
+      {
+        "question": "Choose a type of bread",
+        "option_a": "Challah",
+        "outcome_a": [["OD", 2], ["BP", 1]],
+        "option_b": "Cornbread",
+        "outcome_b": [["RW", 2], ["EC", 1]],
+        "option_c": "Irish soda bread",
+        "outcome_c": [["FS", 2], ["RP", 1]],
+        "option_d": "Multigrain",
+        "outcome_d": [["RP", 2]]
+      },
+      {
+        "question": "Choose a type of bread",
+        "option_a": "Potato bread",
+        "outcome_a": [["EC", 2], ["BP", 1]],
+        "option_b": "Pumpernickel",
+        "outcome_b": [["OD", 2], ["RW", 1]],
+        "option_c": "Bao Buns",
+        "outcome_c": [["FS", 2], ["BP", 1]],
+        "option_d": "Focaccia Bread",
+        "outcome_d": [["RW", 2], ["OD", 1]]
+      },
+      {
+        "question": "Choose a type of bread",
+        "option_a": "Monkey bread",
+        "outcome_a": [["RP", 2], ["BP", 1]],
+        "option_b": "Arepa",
+        "outcome_b": [["EC", 2], ["OD", 1]],
+        "option_c": "Damper",
+        "outcome_c": [["BP", 2], ["RW", 1]],
+        "option_d": "Grissini",
+        "outcome_d": [["FS", 2], ["RP", 1]]
+      },
+      {
+        "question": "Choose a type of bread",
+        "option_a": "Naan",
+        "outcome_a": [["EC", 2], ["OD", 1]],
+        "option_b": "Cinnamon raisin bread",
+        "outcome_b": [["RW", 2], ["BP", 1]],
+        "option_c": "Pretzel",
+        "outcome_c": [["RP", 2], ["FS", 1]],
+        "option_d": "Pan de agua",
+        "outcome_d": [["FS", 2], ["EC", 1]]
+      }
+      ]
     }
   
 }`;
