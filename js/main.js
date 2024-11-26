@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const username = document.getElementById("username")
 
     let randNum = Math.floor(Math.random() * anon_usernames.length);
-    username.textContent = `Anonymous ${anon_usernames[randNum]}`
+    username.textContent = `Anonymous${anon_usernames[randNum]}`
   }
 
 
