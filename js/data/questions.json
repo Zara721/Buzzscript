@@ -183,6 +183,87 @@ const questions = `{
         }
       ]
     },
+    "vacation": {
+      "bio": "Act like you’re on a vacation and we’ll tell you where you should travel to next!",
+      "option_type": "text",
+      "questions": [
+        {
+          "question": "Pick where you would like to spend your day?",
+          "option_a": "Mountains",
+          "outcome_a": [["Canada", 2], ["France", 1]],
+          "option_b": "Beach",
+          "outcome_b": [["Thailand", 2], ["Greece", 1]],
+          "option_c": "Forest",
+          "outcome_c": [["Romania", 2], ["Canada", 1]],
+          "option_d": "Within the city",
+          "outcome_d": [["Germany", 2], ["France", 1]]
+        },
+        {
+          "question": "Pick something to eat",
+          "option_a": "Fries",
+          "outcome_a": [["Canada", 2], ["France", 1]],
+          "option_b": "Sausages",
+          "outcome_b": [["Germany", 2], ["Thailand", 1]],
+          "option_c": "Rice",
+          "outcome_c": [["Greece", 2], ["Thailand", 1]],
+          "option_d": "Baguette",
+          "outcome_d": [["France", 2], ["Romania", 1]]
+        },
+        {
+          "question": "Who are you bringing on vacation with you?",
+          "option_a": "Significant Other",
+          "outcome_a": [["France", 2], ["Greece", 1]],
+          "option_b": "No one",
+          "outcome_b": [["Thailand", 2]],
+          "option_c": "Family",
+          "outcome_c": [["Romania", 2]],
+          "option_d": "Friends",
+          "outcome_d": [["Germany", 2], ["Canada", 1]]
+        },
+        {
+          "question": "What season are you travelling?",
+          "option_a": "Summer",
+          "outcome_a": [["Thailand", 2], ["Greece", 1]],
+          "option_b": "Winter",
+          "outcome_b": [["Canada", 2], ["France", 1]],
+          "option_c": "Fall",
+          "outcome_c": [["Romania", 2], ["Germany", 1]],
+          "option_d": "Spring",
+          "outcome_d": [["Thailand", 2], ["France", 1]]
+        },
+        {
+          "question": "What do you want to explore the most?",
+          "option_a": "Nature",
+          "outcome_a": [["Thailand", 2], ["Canada", 1]],
+          "option_b": "Medieval Buildings",
+          "outcome_b": [["Romania", 2], ["France", 1]],
+          "option_c": "Ancient Architecture",
+          "outcome_c": [["Greece", 2], ["Romania", 1]],
+          "option_d": "Culture",
+          "outcome_d": [["Germany", 2], ["Thailand", 1]]
+        },
+        {
+          "question": "To get around the city, what kind of transportation are you using?",
+          "option_a": "Transit",
+          "outcome_a": [["France", 2], ["Germany", 1]],
+          "option_b": "Uber",
+          "outcome_b": [["Greece", 2], ["Romania", 1]],
+          "option_c": "Renting a car",
+          "outcome_c": [["Canada", 2], ["Thailand", 1]],
+          "option_d": "Walking",
+          "outcome_d": [["Thailand", 2], ["Greece", 1]]
+        }
+      ],
+      "outcomes": {
+        "Romania": ["Romania", "You’ll love the rich culture, medieval architecture, and scenic landscapes.", "romania.png"],
+        "Canada": ["Canada", "Get ready for vast natural beauty, from mountains to forests, and a cozy winter vibe.", "canada.png"],
+        "Thailand": ["Thailand", "You’ll be drawn to the tropical beaches, bustling cities, and rich cultural experiences.", "thailand.png"],
+        "Greece": ["Greece", "With ancient ruins, stunning beaches, and a laid-back atmosphere, Greece is your destination.", "greece.png"],
+        "France": ["France", "You’ll enjoy the mix of city culture, delicious food, and historic landmarks.", "france.png"],
+        "Germany": ["Germany", "Enjoy the mix of modern culture and medieval history, plus some delicious sausages!", "germany.png"]
+      }
+    }
+    ,    
     "witch": {
       "bio": "If you were a witch, what ability would you have?",
       "outcomes": {
