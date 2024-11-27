@@ -255,12 +255,12 @@ const questions = `{
         }
       ],
       "outcomes": {
-        "Romania": ["Romania", "You’ll love the rich culture, medieval architecture, and scenic landscapes.", "romania.png"],
-        "Canada": ["Canada", "Get ready for vast natural beauty, from mountains to forests, and a cozy winter vibe.", "canada.png"],
-        "Thailand": ["Thailand", "You’ll be drawn to the tropical beaches, bustling cities, and rich cultural experiences.", "thailand.png"],
-        "Greece": ["Greece", "With ancient ruins, stunning beaches, and a laid-back atmosphere, Greece is your destination.", "greece.png"],
-        "France": ["France", "You’ll enjoy the mix of city culture, delicious food, and historic landmarks.", "france.png"],
-        "Germany": ["Germany", "Enjoy the mix of modern culture and medieval history, plus some delicious sausages!", "germany.png"]
+        "Romania": ["Romania", "You’ll love the rich culture, medieval architecture, and scenic landscapes.", "romania.jpg"],
+        "Canada": ["Canada", "Get ready for vast natural beauty, from mountains to forests, and a cozy winter vibe.", "canada.jpg"],
+        "Thailand": ["Thailand", "You’ll be drawn to the tropical beaches, bustling cities, and rich cultural experiences.", "thailand.jpg"],
+        "Greece": ["Greece", "With ancient ruins, stunning beaches, and a laid-back atmosphere, Greece is your destination.", "greece.jpg"],
+        "France": ["France", "You’ll enjoy the mix of city culture, delicious food, and historic landmarks.", "france.jpg"],
+        "Germany": ["Germany", "Enjoy the mix of modern culture and medieval history, plus some delicious sausages!", "germany.jpg"]
       }
     }
     ,    
