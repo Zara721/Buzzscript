@@ -1,6 +1,11 @@
 
 document.addEventListener("DOMContentLoaded", () => {
-  randomizeUsername()
+  const anon_username = document.getElementById("anon-username");
+  if (anon_username) {
+    randomizeUsername()
+    document.getElementById("die").addEventListener("click", randomizeUsername);
+  }
+
 
   const navigation = document.getElementById("side-nav");
   const overlay = document.getElementById("overlay")
@@ -22,16 +27,10 @@ document.addEventListener("DOMContentLoaded", () => {
     } 
   }
 
-  document.getElementById("die").addEventListener("click", randomizeUsername);
-
   function randomizeUsername(){
     const anon_usernames = ["Kitty", "Turtle", "Dolphin", "Shark", "Parrot", "Dinosaur", "Lizard", "Milk", "Axolotl", "Panther"];
-
-    //existential turtle, stupid shark
-    const username = document.getElementById("username")
-
     let randNum = Math.floor(Math.random() * anon_usernames.length);
-    username.textContent = `Anonymous${anon_usernames[randNum]}`
+    anon_username.textContent = `Anonymous${anon_usernames[randNum]}`
   }
 
 

@@ -14,7 +14,7 @@
 </head>
 <body>
     <main>
-        <form id="register-form">
+        <form action="../includes/formhandler.inc.php" method="post" id="register-form">
             <div class="form-group">
                 <p>Username:  
                     <span id="display-username">
@@ -23,7 +23,7 @@
                     </span>
                 </p>
                 <div id="username-selects">
-                    <select multiple class="form-control" id="username-adj">
+                    <select multiple class="form-control" name="username-adj" id="username-adj">
                         <option>Slimy</option>
                         <option>Dreamy</option>
                         <option selected>Depressed</option>
@@ -31,7 +31,7 @@
                         <option>Happy</option>
                         <option>Grumpy</option>
                     </select>
-                    <select multiple class="form-control" id="username-noun">
+                    <select multiple class="form-control" name="username-noun" id="username-noun">
                         <option>Turtle</option>
                         <option selected>Dolphin</option>
                         <option>Fox</option>
@@ -45,9 +45,9 @@
             </div>
             <div class="form-group">
             <label for="password">Password:</label>
-            <input type="password" class="form-control" id="password" placeholder="Password">
+            <input type="password" class="form-control" name="passwd" id="password" placeholder="Password">
             </div>
-            <button type="submit" id="submit-btn" class="btn btn-primary">Submit</button>
+            <button type="submit" id="submit-btn" class="btn btn-primary">Sign Up!</button>
             <a href="../index.php" id="return">Return</a>
         </form>
     </main>

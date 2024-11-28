@@ -114,7 +114,7 @@ form {
     align-items: center;
 }
 
-#username {
+.username {
     width: 500px;
     height: 2.5em;
     border: 2.5px solid black;

@@ -1,5 +1,11 @@
 <?php
+    session_start();
     $userStatus = "loggedOut";
+
+    if(isset($_SESSION["username"])) {
+        $userStatus = "loggedIn";
+        $username = $_SESSION["username"];
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,10 +29,10 @@
 
           <?php if ($userStatus == "loggedIn") : ?>
             <li><a href="#">Profile</a></li>
-            <li><a href="#">Logout</a></li>
+            <li><a href="#" id="logout">Logout</a></li>
           <?php else : ?>
             <li><a href="#">Log in</a></li>
-            <li><a href="html/register.html">Register</a></li>
+            <li><a href="php/register.php">Register</a></li>
           <?php endif; ?>
           
         </ul>
@@ -38,7 +44,13 @@
 
         <!-- use form for submitting quiz -->
         <form id="user-info">
-            <p id="username"></p>
+
+            
+            <?php if ($userStatus == "loggedIn") : ?>
+                <p class="username"><?php echo $username ?></p>
+            <?php else : ?>
+                <p class="username" id="anon-username"></p>
+            <?php endif; ?>
 
             <div id="quiz-play-section">
                 <select name="quizzess" id="quiz-select">
@@ -52,7 +64,9 @@
                 <button type="button" id="play-btn">PLAY</button>
             </div>
         </form>
-        <img src="images/die.svg" alt="die" id="die">
+        <?php if ($userStatus == "loggedOut") : ?>
+            <img src="images/die.svg" alt="die" id="die">
+        <?php endif; ?>
     </main>
 </body>
 </html>
