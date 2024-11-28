@@ -1,3 +1,6 @@
+<?php
+    $userStatus = "loggedOut";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,9 +19,16 @@
         <button type="button" class="close-btn">&times;</button>
         <ul>
           <li><a href="#">Settings</a></li>
-          <li><a href="#">Profile</a></li>
           <li><a href="#">Leaderboards</a></li>
-          <li><a href="#">Log In</a></li>
+
+          <?php if ($userStatus == "loggedIn") : ?>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Logout</a></li>
+          <?php else : ?>
+            <li><a href="#">Log in</a></li>
+            <li><a href="#">Register</a></li>
+          <?php endif; ?>
+          
         </ul>
     </nav>
     <button type="button" id="menu-btn"><i class="fas fa-bars"></i></button>

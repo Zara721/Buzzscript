@@ -1,0 +1,64 @@
+main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+form {
+    padding: 20px;
+    width: 50%;
+    border: 2.5px solid black;
+    border-radius: 5px;
+}
+
+p {
+    font-weight: bold;
+}
+
+#display-username {
+    background-color: var(--yellow-color);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#username-selects {
+    display: flex;
+    gap: 20px;
+    width: min(500px, 80%);
+    text-align: center;
+}
+
+select option {
+    color: black;
+}
+
+select option:nth-child(even) {
+    background-color: white;
+}
+
+select option:nth-child(odd) {
+    background-color: #f7f7f7;
+}
+
+select option:checked {
+    background-color: wheat;
+}
+
+#password {
+    max-width: 390px;
+}
+
+#submit-btn {
+    background-color: var(--yellow-color);
+    color: black;
+}
+
+/* common styles for screens and tablets */
+@media only screen and (max-width:768px) {
+   form {
+        width: 80%;
+   }
+}
