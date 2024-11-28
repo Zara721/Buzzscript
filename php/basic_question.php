@@ -9,6 +9,28 @@
     <link rel="stylesheet" href="../css/question.css">
     <link rel="stylesheet" href="../css/question.css">
     <script src="../js/data/questions.json"></script>
+
+    <?php
+
+        $quizList = ['horror_character', 'murder', 'pigeon', 'vacation', 'witch', 'country'];
+        $defaultQuiz = 'horror_character';
+
+        // Check if selected quiz exists
+        if (isset($_GET['selectedQuiz'])) {
+            $selectedQuiz = $_GET['selectedQuiz'];
+            
+            if (!in_array($selectedQuiz, $quizList)) {
+                $selectedQuiz = $defaultQuiz;
+            }
+
+        }
+        else {
+            $selectedQuiz = $defaultQuiz;
+        }
+    ?>
+    <script>
+        const selectedQuiz = '<?php echo $selectedQuiz ?>'
+    </script>
     <script src="../js/quiz.js"></script>
 </head>
 <body>

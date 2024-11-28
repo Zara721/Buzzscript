@@ -1,8 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
-    let highestOutcome = new URLSearchParams(window.location.search).get('highestOutcome');
+    // let highestOutcome = new URLSearchParams(window.location.search).get('highestOutcome');
     console.log(highestOutcome);
 
-    let selectedQuiz = new URLSearchParams(window.location.search).get('selectedQuiz');
     console.log(selectedQuiz)
 
     const questions_json = JSON.parse(questions);
@@ -20,6 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
     outcome_bio.textContent = currentQuiz.outcomes[highestOutcome][1]
     outcome_img.src = `../images/${selectedQuiz}/${currentQuiz.outcomes[highestOutcome][2]}`
 
-    const retake_link = document.getElementById("retake")
-    retake_link.href = `basic_question.html?selectedQuiz=${selectedQuiz}`
+    // const retake_link = document.getElementById("retake")
+    // retake_link.href = `basic_question.php?selectedQuiz=${selectedQuiz}`
+    console.log("working update");
 });

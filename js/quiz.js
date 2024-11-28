@@ -1,6 +1,6 @@
 
 document.addEventListener("DOMContentLoaded", () => {
-    let selectedQuiz = new URLSearchParams(window.location.search).get('selectedQuiz');
+    // let selectedQuiz = new URLSearchParams(window.location.search).get('selectedQuiz');
     console.log(selectedQuiz);
 
     //load data from the JSON file
@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function showResults() {
         console.log(outcomeDict)
         const highestOutcome = Object.keys(outcomeDict).reduce((a, b) => outcomeDict[a] > outcomeDict[b] ? a : b);
-        window.location.href = `quiz_outcome.html?highestOutcome=${highestOutcome}&selectedQuiz=${selectedQuiz}`;
+        window.location.href = `../php/quiz_outcome.php?highestOutcome=${highestOutcome}&selectedQuiz=${selectedQuiz}`;
     }
 
 })

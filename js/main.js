@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
       quiz_page = "timed_questions";
     }
 
-    window.location.href = `html/${quiz_page}.html?selectedQuiz=${selectedQuiz}`;
+    window.location.href = `php/${quiz_page}.php?selectedQuiz=${selectedQuiz}`;
   });
 
 }) 
