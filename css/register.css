@@ -56,6 +56,13 @@ select option:checked {
     color: black;
 }
 
+#return {
+    float: right;
+    line-height: 35px;
+    color: black;
+    text-decoration: underline;
+}
+
 /* common styles for screens and tablets */
 @media only screen and (max-width:768px) {
    form {
