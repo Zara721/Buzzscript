@@ -13,11 +13,4 @@ document.addEventListener("DOMContentLoaded", () => {
         display_noun.textContent = username_noun.value;
     });
 
-    //maz 255 chars
-
-    document.getElementById("register-form").addEventListener("submit", () => {
-        const username = username_adj.value + username_noun.value;
-        console.log(username)
-    });
-
 });

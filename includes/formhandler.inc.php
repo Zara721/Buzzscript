@@ -17,6 +17,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $statement->execute([$username, $passwd, $profile_config, $ach_config, $title]);
 
+        $last_id = $pdo->lastInsertId();
+
         $pdo = null;
         $statement = null;
 
@@ -25,6 +27,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Set session variables
         $_SESSION["username"] = $username;
+        $_SESSION["id"] = $last_id;
+
 
         header("Location: ../index.php");
         die();

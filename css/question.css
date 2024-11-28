@@ -92,7 +92,7 @@ label.images {
 label img {
     height: 50vh;
     width: min(20vw, 250px);
-    object-fit: fill;
+    object-fit: cover;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }

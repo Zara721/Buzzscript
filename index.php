@@ -1,9 +1,10 @@
 <?php
     session_start();
-    $userStatus = "loggedOut";
+    $_SESSION["userStatus"] = "loggedOut";
+    // $userStatus = $_SESSION["userStatus"];
 
     if(isset($_SESSION["username"])) {
-        $userStatus = "loggedIn";
+        $_SESSION["userStatus"] = "loggedIn";
         $username = $_SESSION["username"];
     }
 ?>
@@ -27,11 +28,11 @@
           <li><a href="#">Settings</a></li>
           <li><a href="#">Leaderboards</a></li>
 
-          <?php if ($userStatus == "loggedIn") : ?>
+          <?php if ($_SESSION["userStatus"] == "loggedIn") : ?>
             <li><a href="#">Profile</a></li>
-            <li><a href="#" id="logout">Logout</a></li>
+            <li><a href="php/logout.php" id="logout">Logout</a></li>
           <?php else : ?>
-            <li><a href="#">Log in</a></li>
+            <li><a href="php/login.php">Log in</a></li>
             <li><a href="php/register.php">Register</a></li>
           <?php endif; ?>
           
@@ -46,7 +47,7 @@
         <form id="user-info">
 
             
-            <?php if ($userStatus == "loggedIn") : ?>
+            <?php if ($_SESSION["userStatus"] == "loggedIn") : ?>
                 <p class="username"><?php echo $username ?></p>
             <?php else : ?>
                 <p class="username" id="anon-username"></p>
@@ -64,7 +65,7 @@
                 <button type="button" id="play-btn">PLAY</button>
             </div>
         </form>
-        <?php if ($userStatus == "loggedOut") : ?>
+        <?php if ($_SESSION["userStatus"] == "loggedOut") : ?>
             <img src="images/die.svg" alt="die" id="die">
         <?php endif; ?>
     </main>

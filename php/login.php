@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
+    <title>Log In</title>
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/variables.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -14,7 +14,7 @@
 </head>
 <body>
     <main>
-        <form action="../includes/formhandler.inc.php" method="post" id="register-form">
+        <form action="../includes/formhandlerlogin.inc.php" method="post" id="register-form">
             <div class="form-group">
                 <p>Username:  
                     <span id="display-username">
@@ -47,8 +47,7 @@
             <label for="password">Password:</label>
             <input type="password" class="form-control" name="passwd" id="password" placeholder="Password">
             </div>
-            <!-- ADD CONFIRM PASSWORD -->
-            <button type="submit" id="submit-btn" class="btn btn-primary">Sign Up!</button>
+            <button type="submit" id="submit-btn" class="btn btn-primary">Log In</button>
             <a href="../index.php" id="return">Return</a>
         </form>
     </main>
