@@ -35,7 +35,9 @@
 </head>
 <body>
     <main>
-        <h1 id="question"></h1>
+        <header>
+            <h1 id="question"></h1>
+        </header>
         <form id="choices">
             <div class="option">
                 <input type="radio" id="option_a" name="choice">

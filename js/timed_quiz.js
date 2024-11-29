@@ -78,7 +78,12 @@ document.addEventListener("DOMContentLoaded", () => {
                     console.log(answersDict[key]);
                     answersDict[key] = true;
                     console.log(answersDict[key]);
+
                     updateScore();
+
+                    //add valid answer on screen
+                    const user_answer = document.querySelector("#user-answers p");
+                    user_answer.textContent += enteredAnswer[0].toUpperCase() + enteredAnswer.substring(1) + " · ";
                     break; // exit the loop once we've found a match
                 }
             }

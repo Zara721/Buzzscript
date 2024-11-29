@@ -13,4 +13,12 @@ document.addEventListener("DOMContentLoaded", () => {
         display_noun.textContent = username_noun.value;
     });
 
+    document.getElementById('register-form').addEventListener('submit', function(e) {
+        e.preventDefault('register-form');
+
+        const concat_username = username_adj.value + username_noun.value;
+        document.getElementById('concat-username').value = concat_username;
+
+        this.submit()
+    });
 });

@@ -18,16 +18,18 @@
             <p id="countdown">-:--</p>
         </header>
         
-        <div id="option-input">
+        <section id="option-input">
             <label for="answer" id="quiz-question">Question being asked</label>
             <input type="text" id="answer" name="answer">
             <button type="button" id="start-btn">Start Quiz</button>
             <p id="final-score"></p>
-        </div>
-
+        </section>
         <footer>
             <p id="score"></p>
         </footer>
     </article>
+    <section id="user-answers">
+            <p></p>
+    </section>
 </body>
 </html>

@@ -27,6 +27,7 @@ article {
     color: #f7f7f7;
     border-radius: 5px;
     padding: 20px 30px;
+    width: 480px;
 }
 
 article a {
@@ -92,4 +93,18 @@ header p {
     font-size: 1.2em;
     margin: auto;
     display: none;
+}
+
+#user-answers {
+    background-color: var(--yellow-color);
+    text-align: center;
+    position: absolute;
+    bottom: 15px;
+    width: 480px;
+    border-radius: 5px;
+    border: 2.5px solid black;
+}
+
+#user-answers p {
+    max-width: 480px;
 }
