@@ -1,0 +1,5 @@
+profileColours = ["Black", "Blue", "Brown", "Green", "Grey", "Light Blue", "Light Brown", "Light Green", "Orange", "Peach", 
+                  "Pink", "Purple", Red", "White", "Yellow"];
+
+profileHats = ["Baseball", "Berret", "Bird Nest", "Cowboy", "Crown", "Jester", "Killer Mask", "Mafia", "Sherlock", "Summer"
+               "Top", "Witch", "Zara"];
