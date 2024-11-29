@@ -101,8 +101,20 @@ main h1 {
     padding: 0px 15px;
 }
 
-#profile-pic {
-    height: 180px;
+#profile-pic-container {
+    position: relative;
+    height: 100px;
+    width: 100px;
+    margin: auto;
+    display: block;
+}
+
+#profile-body, #profile-ring, #profile-hat{
+    height: 100px;
+}
+
+#profile-ring, #profile-hat {
+    position: absolute; top: 0px; right: 0px; z-index: 1;
 }
 
 form {
@@ -179,7 +191,7 @@ form {
         font-size: 3.6em;
     }
 
-    #username {
+    .username {
         width: 356px;
     }
 
@@ -224,7 +236,7 @@ form {
 @media only screen and (min-width: 481px)
 and (max-width: 768px) {
 
-    #username {
+    .username {
         width: 400px;
     }
 

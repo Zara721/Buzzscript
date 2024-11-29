@@ -1,7 +1,6 @@
 <?php
     session_start();
     $_SESSION["userStatus"] = "loggedOut";
-    // $userStatus = $_SESSION["userStatus"];
 
     if(isset($_SESSION["username"])) {
         $_SESSION["userStatus"] = "loggedIn";
@@ -41,7 +40,11 @@
     <button type="button" id="menu-btn"><i class="fas fa-bars"></i></button>
     <main>
         <h1>BuzzScript</h1>
-        <img src="images/profile.png" alt="profile picture" id="profile-pic">
+            <div id="profile-pic-container">
+                <img src="assets/Body/Orange Body.png" alt="profile picture body" id="profile-body">
+                <img src="assets/Ring/Orange Ring.png" alt="profile picture body" id="profile-ring">
+                <img src="assets/Hats/Top Hat.png" alt="profile picture body" id="profile-hat">
+            </div>
 
         <!-- use form for submitting quiz -->
         <form id="user-info">
