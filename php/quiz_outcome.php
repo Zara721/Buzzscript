@@ -32,10 +32,17 @@
             $highestOutcome = "FG";
         }
 
+        $darkMode = "off";
+        // check if selected quiz exists
+        if (isset($_GET['darkMode'])) {
+            $darkMode = $_GET['darkMode'];
+        }
+
     ?>
     <script>
         const selectedQuiz = '<?php echo $selectedQuiz ?>'
         const highestOutcome = '<?php echo $highestOutcome ?>'
+        const darkMode = '<?php echo $darkMode ?>';
     </script>
     <script src="../js/quiz_outcome.js"></script>
 </head>
@@ -48,8 +55,8 @@
             <p id="bio">A quipy outcome bio!</p>
             <img src="" id="outcome-img">
         </section>
-        <a href="basic_question.php?selectedQuiz=<?php echo $selectedQuiz?>" id="retake">Retake</a>
-        <a href="../index.php" id="home">Home</a>
+        <a href="basic_question.php?selectedQuiz=<?php echo $selectedQuiz?>&darkMode=<?php echo $darkMode?>" id="retake">Retake</a>
+        <a href="../index.php?darkMode=<?php echo $darkMode?>" id="home">Home</a>
     </main>
 </body>
 </html>

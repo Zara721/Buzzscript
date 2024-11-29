@@ -8,6 +8,10 @@ body {
     align-items: center;
 }
 
+body.dark-mode {
+    background-color: black;
+}
+
 @keyframes bounce-background {
     from {
         background-position: top;

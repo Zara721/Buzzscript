@@ -3,6 +3,21 @@ document.addEventListener("DOMContentLoaded", () => {
     // let selectedQuiz = new URLSearchParams(window.location.search).get('selectedQuiz');
     console.log(selectedQuiz);
 
+    if (darkMode == "on") {
+        document.querySelector("header").classList.add("dark-mode");
+        document.querySelector("main").classList.add("dark-mode");
+
+        const labelElements = document.querySelectorAll("label");
+        labelElements.forEach(element => {
+            element.classList.add("dark-mode")
+        })
+
+        const radioElements = document.querySelectorAll(`input[type="radio"]`)
+        radioElements.forEach(element => {
+            element.classList.add("dark-mode")
+        })
+    }
+
     //load data from the JSON file
     const questions_json = JSON.parse(questions);
     const currentQuiz = questions_json[selectedQuiz];
@@ -103,7 +118,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function showResults() {
         console.log(outcomeDict)
         const highestOutcome = Object.keys(outcomeDict).reduce((a, b) => outcomeDict[a] > outcomeDict[b] ? a : b);
-        window.location.href = `../php/quiz_outcome.php?highestOutcome=${highestOutcome}&selectedQuiz=${selectedQuiz}`;
+        window.location.href = `../php/quiz_outcome.php?highestOutcome=${highestOutcome}&selectedQuiz=${selectedQuiz}&darkMode=${darkMode}`;
     }
 
 })

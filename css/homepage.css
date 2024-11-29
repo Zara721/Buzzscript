@@ -1,10 +1,15 @@
 body {
     background-image: url("../images/home_bg.png");
+    background-color: white;
     background-size: cover;
     animation: bounce-background 5s ease-in-out infinite;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+body.dark-mode {
+    background-color: black;
 }
 
 @keyframes bounce-background {
@@ -40,6 +45,7 @@ nav {
 
 #side-nav.show {
     width: 300px;
+    height: 100vh;
     padding-left: 2.5rem;
     padding-right: 2rem;
 }
@@ -59,6 +65,18 @@ nav a:active {
 
 li {
     list-style: none;
+}
+
+#dark-mode-btn {
+    margin-top: 30px;
+    color: #f7f7f7;
+    background-color: rgba(0, 0, 0, 0);
+    position: relative;
+    bottom: 0;
+    border: 2.5px solid #f7f7f7;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
 }
 
 .close-btn {
@@ -87,6 +105,11 @@ nav .close-btn {
     cursor: pointer;
     position: absolute;
 }
+
+#menu-btn.dark-mode {
+    background-color: hsla(0, 0%, 0%, 0.279);
+    color: var(--orange-color);
+} 
    
 main {
     text-align: center;
@@ -137,6 +160,12 @@ form {
     line-height: 2.5em;
     margin-bottom: 10px;
     background-color: white;
+}
+
+.username.dark-mode {
+    background-color: black;
+    color: #f7f7f7;
+    border: 2.5px solid #f7f7f7;
 }
 
 /* change the blue bg sometimes */

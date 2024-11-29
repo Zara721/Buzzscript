@@ -15,21 +15,28 @@
         $quizList = ['horror_character', 'murder', 'pigeon', 'vacation', 'witch', 'country'];
         $defaultQuiz = 'horror_character';
 
-        // Check if selected quiz exists
+        // check if selected quiz exists
         if (isset($_GET['selectedQuiz'])) {
             $selectedQuiz = $_GET['selectedQuiz'];
             
             if (!in_array($selectedQuiz, $quizList)) {
                 $selectedQuiz = $defaultQuiz;
             }
-
         }
         else {
             $selectedQuiz = $defaultQuiz;
         }
+
+        $darkMode = "off";
+        // check if selected quiz exists
+        if (isset($_GET['darkMode'])) {
+            $darkMode = $_GET['darkMode'];
+        }
+        
     ?>
     <script>
-        const selectedQuiz = '<?php echo $selectedQuiz ?>'
+        const selectedQuiz = '<?php echo $selectedQuiz ?>';
+        const darkMode = '<?php echo $darkMode ?>';
     </script>
     <script src="../js/quiz.js"></script>
 </head>

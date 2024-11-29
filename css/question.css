@@ -7,6 +7,8 @@
     --option-size: 4vw;
   }
 
+
+
 main {
     display: flex;
     flex-direction: column;
@@ -14,6 +16,10 @@ main {
     align-items: center;
     height: 100vh;
     overflow: hidden;
+}
+
+main.dark-mode {
+    background-color: black;
 }
 
 header {
@@ -29,6 +35,12 @@ header {
     font-size: max(3.5vw, 1.5em);
     width: 90%;
     padding: 20px;
+}
+
+header.dark-mode {
+    background-color: black;
+    border: 4px solid #f7f7f7;
+    color: #f7f7f7;
 }
 
 #choices {
@@ -88,6 +100,10 @@ label {
     margin-right: 10px;
 }
 
+label.dark-mode {
+    color: #f7f7f7;
+}
+
 label.images {
     margin-right: 0;
     height: 50vh;
@@ -131,6 +147,12 @@ input[type="radio"]::before:checked {
 input[type="radio"]:checked {
     border: 0.3em solid black;
 }
+
+  
+input[type="radio"].dark-mode:checked {
+    border: 0.3em solid #d7d7d7;
+}
+
 
 input[type="radio"]#option_a {
     background-color: var(--red-opt-color);

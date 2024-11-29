@@ -35,9 +35,8 @@
             <li><a href="php/login.php">Log in</a></li>
             <li><a href="php/register.php">Register</a></li>
           <?php endif; ?>
-
-          <!-- <li><button>Toggle Dark Mode</button></li> -->
         </ul>
+        <button id="dark-mode-btn">Toggle Dark Mode</button>
     </nav>
     <button type="button" id="menu-btn"><i class="fas fa-bars"></i></button>
     <main>

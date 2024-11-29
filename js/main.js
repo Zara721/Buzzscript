@@ -27,13 +27,19 @@ document.addEventListener("DOMContentLoaded", () => {
     } 
   }
 
+  const dark_mode_btn = document.getElementById("dark-mode-btn");
+  dark_mode_btn.addEventListener("click", ()=> {
+    document.querySelector("body").classList.toggle("dark-mode");
+    document.querySelector(".username").classList.toggle("dark-mode");
+    document.getElementById("menu-btn").classList.toggle("dark-mode");
+
+  })
+
   function randomizeUsername(){
     const anon_usernames = ["Kitty", "Turtle", "Dolphin", "Shark", "Parrot", "Dinosaur", "Lizard", "Milk", "Axolotl", "Panther"];
     let randNum = Math.floor(Math.random() * anon_usernames.length);
     anon_username.textContent = `Anonymous${anon_usernames[randNum]}`
   }
-
-
 
   // Set up event listener for the qiestion's form submission 
   document.getElementById("play-btn").addEventListener("click", function(event) {
@@ -47,7 +53,13 @@ document.addEventListener("DOMContentLoaded", () => {
       quiz_page = "timed_questions";
     }
 
-    window.location.href = `php/${quiz_page}.php?selectedQuiz=${selectedQuiz}`;
+    dark_mode = "off";
+
+    if (document.querySelector("body").classList.contains("dark-mode")) {
+      dark_mode = "on";
+    } 
+
+    window.location.href = `php/${quiz_page}.php?selectedQuiz=${selectedQuiz}&darkMode=${dark_mode}`;
   });
 
 }) 

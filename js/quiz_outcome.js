@@ -2,7 +2,11 @@ document.addEventListener("DOMContentLoaded", () => {
     // let highestOutcome = new URLSearchParams(window.location.search).get('highestOutcome');
     console.log(highestOutcome);
 
-    console.log(selectedQuiz)
+    console.log(selectedQuiz);
+
+    if (darkMode == "on") {
+        document.querySelector("body").classList.toggle("dark-mode");
+    }
 
     const questions_json = JSON.parse(questions);
     const currentQuiz = questions_json[selectedQuiz];
