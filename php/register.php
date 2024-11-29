@@ -16,6 +16,7 @@
     <main>
         <form action="../includes/formhandler.inc.php" method="post" id="register-form">
             <div class="form-group">
+                <input type="hidden" id="concat-username" name="concat-username">
                 <p>Username:  
                     <span id="display-username">
                         <span id="display-adj"></span>
@@ -44,8 +45,15 @@
                 </div>
             </div>
             <div class="form-group">
-            <label for="password">Password:</label>
-            <input type="password" class="form-control" name="passwd" id="password" placeholder="Password">
+                <label for="password">Password:</label>
+                <input type="password" class="form-control" name="passwd" id="password" 
+                required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d@$!%*?&]{8,225}$"
+                title="Password must be at least 8 characters, contain at least one uppercase letter, one lowercase letter, and one number"
+                placeholder="Password">
+            </div>
+            <div class="form-group">
+                <label for="password">Confirm Password:</label>
+                <input type="password" class="form-control" name="confirm-passwd" id="confirm-password" title="Passwords need to match" placeholder="Password" required>
             </div>
             <!-- ADD CONFIRM PASSWORD -->
             <button type="submit" id="submit-btn" class="btn btn-primary">Sign Up!</button>

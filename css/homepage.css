@@ -103,14 +103,14 @@ main h1 {
 
 #profile-pic-container {
     position: relative;
-    height: 100px;
-    width: 100px;
+    height: 150px;
+    width: 150px;
     margin: auto;
     display: block;
 }
 
 #profile-body, #profile-ring, #profile-hat{
-    height: 100px;
+    height: 150px;
 }
 
 #profile-ring, #profile-hat {
@@ -136,6 +136,7 @@ form {
     text-align: center;
     line-height: 2.5em;
     margin-bottom: 10px;
+    background-color: white;
 }
 
 /* change the blue bg sometimes */
@@ -187,6 +188,9 @@ form {
 
 /* styles for small screens */
 @media only screen and (max-width:480px) {
+    body {
+        background-image: url("../assets/Miscellaneous/Phone Background.png");
+    }
     main h1 {
         font-size: 3.6em;
     }

@@ -13,12 +13,24 @@ document.addEventListener("DOMContentLoaded", () => {
         display_noun.textContent = username_noun.value;
     });
 
+    const confirm_password = document.getElementById("confirm-password");
+    const password = document.getElementById("password");
     document.getElementById('register-form').addEventListener('submit', function(e) {
         e.preventDefault('register-form');
 
         const concat_username = username_adj.value + username_noun.value;
         document.getElementById('concat-username').value = concat_username;
 
+        if (confirm_password) {
+            if (confirm_password.value.trim() != password.value.trim()) {
+                alert("Passwords do not match");
+                return;
+            }
+        }
+
         this.submit()
     });
+
+    
+    
 });

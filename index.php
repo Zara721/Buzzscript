@@ -4,7 +4,8 @@
 
     if(isset($_SESSION["username"])) {
         $_SESSION["userStatus"] = "loggedIn";
-        $username = $_SESSION["username"];
+        $profile_config = "Jester#Purple#Black"; //Hat#Body#Ring
+        $profile_config_names = explode("#", $profile_config);
     }
 ?>
 <!DOCTYPE html>
@@ -34,24 +35,34 @@
             <li><a href="php/login.php">Log in</a></li>
             <li><a href="php/register.php">Register</a></li>
           <?php endif; ?>
-          
+
+          <!-- <li><button>Toggle Dark Mode</button></li> -->
         </ul>
     </nav>
     <button type="button" id="menu-btn"><i class="fas fa-bars"></i></button>
     <main>
         <h1>BuzzScript</h1>
-            <div id="profile-pic-container">
-                <img src="assets/Body/Orange Body.png" alt="profile picture body" id="profile-body">
-                <img src="assets/Ring/Orange Ring.png" alt="profile picture body" id="profile-ring">
-                <img src="assets/Hats/Top Hat.png" alt="profile picture body" id="profile-hat">
-            </div>
+
+            <?php if ($_SESSION["userStatus"] == "loggedIn") : ?>
+                <div id="profile-pic-container">
+                    <img src="assets/Body/<?php echo $profile_config_names [1] ?> Body.png" alt="profile picture body" id="profile-body">
+                    <img src="assets/Ring/<?php echo $profile_config_names [2] ?> Ring.png" alt="profile picture body" id="profile-ring">
+                    <img src="assets/Hats/<?php echo $profile_config_names [0] ?> Hat.png" alt="profile picture body" id="profile-hat">
+                </div>
+            <?php else : ?>
+                <div id="profile-pic-container">
+                    <img src="assets/Body/Orange Body.png" alt="profile picture body" id="profile-body">
+                    <img src="assets/Ring/Orange Ring.png" alt="profile picture body" id="profile-ring">
+                    <img src="assets/Hats/Top Hat.png" alt="profile picture body" id="profile-hat">
+                </div>
+            <?php endif; ?>
 
         <!-- use form for submitting quiz -->
         <form id="user-info">
 
             
             <?php if ($_SESSION["userStatus"] == "loggedIn") : ?>
-                <p class="username"><?php echo $username ?></p>
+                <p class="username"><?php echo $_SESSION["username"] ?></p>
             <?php else : ?>
                 <p class="username" id="anon-username"></p>
             <?php endif; ?>
@@ -69,7 +80,7 @@
             </div>
         </form>
         <?php if ($_SESSION["userStatus"] == "loggedOut") : ?>
-            <img src="images/die.svg" alt="die" id="die">
+            <img src="assets/Miscellaneous/Die.png" alt="die" id="die">
         <?php endif; ?>
     </main>
 </body>

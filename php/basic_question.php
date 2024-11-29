@@ -60,7 +60,7 @@
             </div>
 
             <button type="submit" id="submit">
-                <img src="../images/arrow.png" alt="">
+                <img src="../assets/Miscellaneous/Next Button.png" alt="">
             </button>
         </from>
     </main>

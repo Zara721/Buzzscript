@@ -47,7 +47,7 @@ select option:checked {
     background-color: wheat;
 }
 
-#password {
+#password, #confirm-password {
     max-width: 390px;
 }
 

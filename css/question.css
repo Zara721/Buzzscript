@@ -129,7 +129,7 @@ input[type="radio"]::before:checked {
 }
   
 input[type="radio"]:checked {
-    border: 0.2em solid black;
+    border: 0.3em solid black;
 }
 
 input[type="radio"]#option_a {
