@@ -4,7 +4,7 @@ function getUserInfo($userId, $pdo) {
     try{
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        $query = "SELECT username, profile_config, ach_config, title FROM users WHERE id = ?;";
+        $query = "SELECT * FROM users WHERE id = ?;";
 
         $statement = $pdo->prepare($query);
 
@@ -13,6 +13,7 @@ function getUserInfo($userId, $pdo) {
         $result = $statement->fetch(PDO::FETCH_ASSOC);
 
         $pdo = null;
+        $statement = null;
 
         return $result;
         

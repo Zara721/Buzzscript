@@ -101,4 +101,14 @@ document.addEventListener("DOMContentLoaded", () => {
         const hatImg = document.getElementById("profile-hat");
         hatImg.src = `../assets/Hats/${profile_config[0]} Hat.png`;
     }
+
+    document.querySelector('form').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const profile_config_element = document.getElementById("profile-config");
+        profile_config_element.value = profile_config.join("#");
+
+        console.log(profile_config_element.value);
+        this.submit()
+    });
 });

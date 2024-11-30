@@ -9,9 +9,10 @@
     }
 
     $darkMode = "off";
-        // check if selected quiz exists
-        if (isset($_GET['darkMode'])) {
-            $darkMode = $_GET['darkMode'];
+    
+    // check if darkMode is passed in
+    if (isset($_GET['darkMode'])) {
+        $darkMode = $_GET['darkMode'];
     }
 ?>
 <!DOCTYPE html>
@@ -52,11 +53,13 @@
         <h1>BuzzScript</h1>
 
             <?php if ($_SESSION["userStatus"] == "loggedIn") : ?>
-                <div id="profile-pic-container">
-                    <img src="assets/Body/<?php echo $profile_config_names [1] ?> Body.png" alt="profile picture body" id="profile-body">
-                    <img src="assets/Ring/<?php echo $profile_config_names [2] ?> Ring.png" alt="profile picture body" id="profile-ring">
-                    <img src="assets/Hats/<?php echo $profile_config_names [0] ?> Hat.png" alt="profile picture body" id="profile-hat">
-                </div>
+                    <div id="profile-pic-container">
+                        <img src="assets/Body/<?php echo $profile_config_names [1] ?> Body.png" alt="profile picture body" id="profile-body">
+                        <img src="assets/Ring/<?php echo $profile_config_names [2] ?> Ring.png" alt="profile picture body" id="profile-ring">
+                        <a href="php/profile_picture.php">
+                            <img src="assets/Hats/<?php echo $profile_config_names [0] ?> Hat.png" alt="profile picture body" id="profile-hat">
+                        </a>
+                    </div>
             <?php else : ?>
                 <div id="profile-pic-container">
                     <img src="assets/Body/Orange Body.png" alt="profile picture body" id="profile-body">

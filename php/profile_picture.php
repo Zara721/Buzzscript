@@ -2,7 +2,10 @@
     session_start();
 
     //grab default from user profile config
-    $profile_config = "Jester#Purple#Black";
+    if(isset($_SESSION["profile_config"])) {
+        $profile_config = $_SESSION["profile_config"]; //Hat#Body#Ring
+    }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -28,10 +31,11 @@
             <button type="button" id="body">Body</button>
             <button type="button" id="ring">Ring</button>
         </div>
-        <div id="options">
-            <!-- <img src="../assets/Hats/Baseball Hat Icon.png"> -->
-        </div>
-        <a href="#" id="update">Update Profile</a>
+        <div id="options"> </div>
+        <form action="../includes/formhandler.profilepic.inc.php" method="post">
+            <input type="hidden" id="profile-config" name="profile-config">
+            <button type="submit" id="update">Update Profile</button>
+        </form>
         <a href="../index.php" id="return">Return</a>
     </article>
 </body>

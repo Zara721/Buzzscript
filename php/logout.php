@@ -13,7 +13,7 @@ function logoutUser() {
     session_regenerate_id(true);
 
     // redirect to home page
-    header("Location: ../index.php");
+    header("Location: ../index.php?darkMode=off");
     exit();
 }
 
