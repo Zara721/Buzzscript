@@ -7,6 +7,12 @@
         $profile_config = "Jester#Purple#Black"; //Hat#Body#Ring
         $profile_config_names = explode("#", $profile_config);
     }
+
+    $darkMode = "off";
+        // check if selected quiz exists
+        if (isset($_GET['darkMode'])) {
+            $darkMode = $_GET['darkMode'];
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,6 +24,9 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/homepage.css">
+    <script>
+        let darkMode = '<?php echo $darkMode ?>';
+    </script>
     <script src="js/main.js"></script>
 </head>
 <body>

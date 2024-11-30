@@ -4,6 +4,10 @@ document.addEventListener("DOMContentLoaded", () => {
     let selectedQuiz = "countries"
     console.log(selectedQuiz);
 
+    if (darkMode == "on") {
+        document.querySelector("body").classList.add("dark-mode");
+    }
+
     //load data from the JSON file
     const questions_json = JSON.parse(questions);
     const currentQuiz = questions_json[selectedQuiz];
@@ -27,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("quiz-question").textContent = bio;
 
     const retake_link = document.getElementById("retake")
-    retake_link.href = `timed_questions.html?selectedQuiz=${selectedQuiz}`
+    retake_link.href = `timed_questions.php?selectedQuiz=${selectedQuiz}`
 
     const countdown = document.getElementById("countdown");
     let minutes = 1;
@@ -62,6 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
     start_btn.addEventListener("click", () => {
         start_btn.style.display = "none";
         answer_field.style.display = "block";
+        answer_field.focus();
         scoreElement.textContent = score
         countdownInterval= setInterval(updateCountdown, 1000);
     })

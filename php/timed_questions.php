@@ -8,13 +8,23 @@
     <link rel="stylesheet" href="../css/variables.css">
     <link rel="stylesheet" href="../css/timed_questions.css">
     <script src="../js/data/timed_questions.json"></script>
+    <?php
+        $darkMode = "off";
+        // check if darkMode is on
+        if (isset($_GET['darkMode'])) {
+            $darkMode = $_GET['darkMode'];
+        }
+    ?>
+    <script>
+        const darkMode = '<?php echo $darkMode ?>';
+    </script>
     <script src="../js/timed_quiz.js"></script>
 </head>
 <body>
     <article>
         <header>
             <a href="../index.html" id="retake">Replay</a>
-            <a href="../index.php" id="home">Home</a>
+            <a href="../index.php?darkMode=<?php echo $darkMode?>" id="home">Home</a>
             <p id="countdown">-:--</p>
         </header>
         

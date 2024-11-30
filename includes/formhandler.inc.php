@@ -5,7 +5,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $passwd = $_POST["passwd"];
     $profile_config = "Top#Orange#Orange";
     $ach_config = "created_account";
-    $title = "Honey_Newbie";
+    $selected_title = "Honey_Newbie";
+    //$title_list = "Honey_Newbie#";
+
 
     try{
         require_once "dbh.inc.php";
@@ -15,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $statement = $pdo->prepare($query);
 
-        $statement->execute([$username, $passwd, $profile_config, $ach_config, $title]);
+        $statement->execute([$username, $passwd, $profile_config, $ach_config, $selected_title]);
 
         $last_id = $pdo->lastInsertId();
 

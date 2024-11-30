@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BuzzScript Quiz</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/variables.css">
     <link rel="stylesheet" href="../css/question.css">
@@ -28,7 +30,7 @@
         }
 
         $darkMode = "off";
-        // check if selected quiz exists
+        // check if darkMode is on
         if (isset($_GET['darkMode'])) {
             $darkMode = $_GET['darkMode'];
         }

@@ -18,6 +18,10 @@ p {
     font-weight: bold;
 }
 
+.alert-info {
+    display: none;
+}
+
 #display-username {
     background-color: var(--yellow-color);
     border-radius: 5px;

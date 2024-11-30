@@ -108,7 +108,11 @@ document.addEventListener("DOMContentLoaded", () => {
             currentQuestionIndex++;
             currentQuestionIndex >= currentQuiz.questions.length ? showResults() : loadQuestion();
         } else {
-            alert("Please select an option.");
+            Swal.fire({
+                text: 'Please select an option.',
+                icon: 'warning',
+                confirmButtonText: 'OK'
+            });
         }
 
         const form = document.getElementById("choices");

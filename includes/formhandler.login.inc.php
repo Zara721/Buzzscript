@@ -29,7 +29,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             header("Location: ../index.php");
             die();
         } else {
-            // Login credentials not found in database
+            
+            // login credentials not found in database
             header("Location: ../index.php?error=loginfailed&username=' . $username . '&password=' . $passwd");
             die();
         }

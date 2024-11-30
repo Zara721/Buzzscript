@@ -51,8 +51,10 @@
     <main>
         <h1 id="quiz-name">Quiz name goes here</h1>
         <section id="display-outcome">
-            <h2 id="outcome">Outcome</h2>
-            <p id="bio">A quipy outcome bio!</p>
+            <header>
+                <h2 id="outcome">Outcome</h2>
+                <p id="bio">A quipy outcome bio!</p>
+            </header>
             <img src="" id="outcome-img">
         </section>
         <a href="basic_question.php?selectedQuiz=<?php echo $selectedQuiz?>&darkMode=<?php echo $darkMode?>" id="retake">Retake</a>

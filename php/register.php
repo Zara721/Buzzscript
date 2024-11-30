@@ -14,6 +14,9 @@
 </head>
 <body>
     <main>
+        <div class="alert alert-info">
+            Passwords do not match&nbsp;
+        </div>
         <form action="../includes/formhandler.inc.php" method="post" id="register-form">
             <div class="form-group">
                 <input type="hidden" id="concat-username" name="concat-username">

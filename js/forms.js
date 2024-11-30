@@ -23,9 +23,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (confirm_password) {
             if (confirm_password.value.trim() != password.value.trim()) {
-                alert("Passwords do not match");
+                $('.alert').alert();
+                document.querySelector(".alert-info").style.display = "block";
                 return;
-            }
+            } 
         }
 
         this.submit()

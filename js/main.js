@@ -6,6 +6,10 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("die").addEventListener("click", randomizeUsername);
   }
 
+  if (darkMode == "on") {
+    toggleDarkMode() 
+  }
+
 
   const navigation = document.getElementById("side-nav");
   const overlay = document.getElementById("overlay")
@@ -28,12 +32,14 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   const dark_mode_btn = document.getElementById("dark-mode-btn");
-  dark_mode_btn.addEventListener("click", ()=> {
+  dark_mode_btn.addEventListener("click", toggleDarkMode)
+
+  function toggleDarkMode() {
     document.querySelector("body").classList.toggle("dark-mode");
     document.querySelector(".username").classList.toggle("dark-mode");
     document.getElementById("menu-btn").classList.toggle("dark-mode");
 
-  })
+  }
 
   function randomizeUsername(){
     const anon_usernames = ["Kitty", "Turtle", "Dolphin", "Shark", "Parrot", "Dinosaur", "Lizard", "Milk", "Axolotl", "Panther"];
@@ -53,13 +59,12 @@ document.addEventListener("DOMContentLoaded", () => {
       quiz_page = "timed_questions";
     }
 
-    dark_mode = "off";
 
     if (document.querySelector("body").classList.contains("dark-mode")) {
-      dark_mode = "on";
+      darkMode = "on";
     } 
 
-    window.location.href = `php/${quiz_page}.php?selectedQuiz=${selectedQuiz}&darkMode=${dark_mode}`;
+    window.location.href = `php/${quiz_page}.php?selectedQuiz=${selectedQuiz}&darkMode=${darkMode}`;
   });
 
 }) 

@@ -14,7 +14,7 @@
 </head>
 <body>
     <main>
-        <form action="../includes/formhandlerlogin.inc.php" method="post" id="register-form">
+        <form action="../includes/formhandler.login.inc.php" method="post" id="register-form">
             <div class="form-group">
             <input type="hidden" id="concat-username" name="concat-username">
                 <p>Username:  

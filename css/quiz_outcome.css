@@ -27,7 +27,7 @@ body.dark-mode {
 
 main {
     background-image: linear-gradient(to bottom right, var(--orange-color), var(--yellow-color));
-    width: 50vw;
+    width: max(50vw, 600px);
     color: #f7f7f7;
     border-radius: 5px;
     padding: 15px;
@@ -43,6 +43,9 @@ main section {
     margin: 15px 20px;
     padding: 20px;
     border-radius: 5px;
+    height: 60vh;
+    display: grid;
+    align-items: center;
 }
 
 #outcome-img {
@@ -62,4 +65,29 @@ main a {
 
 #home {
     float: right;
+}
+
+@media only screen and (max-width:480px) {
+    main {
+        width: 80vw;
+    }
+
+    body {
+        background-image: url("../assets/Miscellaneous/Phone Background.png");
+    }
+
+    main section {
+        height: 250px;
+    }
+}
+
+@media only screen and (min-width: 481px)
+and (max-width: 768px) {
+    main {
+        width: 80vw;
+    }
+
+    main section {
+        height: 350px;
+    }
 }

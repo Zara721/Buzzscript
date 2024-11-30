@@ -7,6 +7,10 @@ body {
     align-items: center;
 }
 
+body.dark-mode {
+    background-color: black;
+}
+
 @keyframes bounce-background {
     from {
         background-position: top;
@@ -107,4 +111,26 @@ header p {
 
 #user-answers p {
     max-width: 480px;
+}
+
+@media only screen and (max-width:480px) {
+    article, #user-answers {
+        width: 70vw;
+    }
+
+    #user-answers p {
+        font-size: 0.9em;
+    }
+
+    body {
+        background-image: url("../assets/Miscellaneous/Phone Background.png");
+    }
+
+}
+
+@media only screen and (min-width: 481px)
+and (max-width: 768px) {
+    article, #user-answers {
+        width: 70vw;
+    }
 }
