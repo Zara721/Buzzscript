@@ -25,6 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // set session variables
             $_SESSION["username"] = $username;
             $_SESSION["id"] = $result['id'];
+            $_SESSION['profile_config'] = $result['profile_config'];
 
             header("Location: ../index.php");
             die();

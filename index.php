@@ -4,7 +4,7 @@
 
     if(isset($_SESSION["username"])) {
         $_SESSION["userStatus"] = "loggedIn";
-        $profile_config = "Jester#Purple#Black"; //Hat#Body#Ring
+        $profile_config = $_SESSION["profile_config"]; //Hat#Body#Ring
         $profile_config_names = explode("#", $profile_config);
     }
 

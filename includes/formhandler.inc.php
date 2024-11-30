@@ -3,7 +3,7 @@
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST["username-adj"] . $_POST["username-noun"];
     $passwd = $_POST["passwd"];
-    $profile_config = "Top#Orange#Orange";
+    $profile_config = "Witch#Orange#Orange";
     $ach_config = "created_account";
     $selected_title = "Honey_Newbie";
     //$title_list = "Honey_Newbie#";
