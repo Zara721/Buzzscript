@@ -57,7 +57,7 @@
                         <img src="assets/Body/<?php echo $profile_config_names [1] ?> Body.png" alt="profile picture body" id="profile-body">
                         <img src="assets/Ring/<?php echo $profile_config_names [2] ?> Ring.png" alt="profile picture body" id="profile-ring">
                         <a href="php/profile_picture.php">
-                            <img src="assets/Hats/<?php echo $profile_config_names [0] ?> Hat.png" alt="profile picture body" id="profile-hat">
+                            <img src="assets/Hats/<?php echo $profile_config_names [0] ?> Hat.png" title="Change Profile Picture" alt="profile picture body" id="profile-hat">
                         </a>
                     </div>
             <?php else : ?>
