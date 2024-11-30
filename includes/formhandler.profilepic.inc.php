@@ -14,10 +14,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         require_once "updateprofilepic.inc.php";
 
-        // Start a session or continue an existing one
+        // start a session or continue an existing one
         session_start();
 
-        // Set session variables
+        // update session variables
         $_SESSION["profile_config"] = $newProfileConfig;
 
         header("Location: ../index.php");
