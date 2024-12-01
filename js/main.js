@@ -64,8 +64,11 @@ document.addEventListener("DOMContentLoaded", () => {
       darkMode = "off";
     }
 
-    document.getElementById("profile-pic-link").href = `php/profile_picture.php?darkMode=${darkMode}`
-    document.getElementById("profile-link").href = `php/profile.php?darkMode=${darkMode}`
+    const profiel_pic_link = document.getElementById("profile-pic-link");
+    if (profiel_pic_link) {
+      document.getElementById("profile-pic-link").href = `php/profile_picture.php?darkMode=${darkMode}`
+      document.getElementById("profile-link").href = `php/profile.php?darkMode=${darkMode}`
+    }
 
   }
 
