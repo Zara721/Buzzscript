@@ -16,6 +16,7 @@
         }
     
         $currentTitles = $result["title_list"];
+        $achList = $result["ach_config"];
     }
 
 ?>
@@ -83,6 +84,8 @@
         <?php if ($_SESSION["userStatus"] == "loggedIn") : ?>
             <form action="../includes/formhandler.updatetitle.inc.php?darkMode=<?php echo $darkMode?>" method="post">
                 <input type="hidden" name="currentTitles" value="<?php echo $currentTitles ?>">
+                <input type="hidden" name="achList" value="<?php echo $achList ?>">
+                <input type="hidden" name="selectedQuiz" value="<?php echo $selectedQuiz ?>">
                 <input type="hidden" name="newTitle" id="newTitle">
                 <button type="submit" id="home">Home</button>
             </form>

@@ -1,0 +1,15 @@
+<option value="horror_character" data-timed="false">If you entered a horror movie, what role would you play?</option>
+                    <option value="pigeon" data-timed="false">What pigeon are you based on the bread you like?</option>
+                    <option value="murder" data-timed="false">Can you get away with murder?</option>
+                    <option value="witch" data-timed="false">If you were a witch, what ability would you have?</option>
+                    <option value="vacation" data-timed="false">What would be your dream vacation?</option>
+                    <option value="country" data-timed="true">How many countries can you name in a minute?</option> 
+
+
+{
+    "horror_character": ["The One Who Knows", "The Survivor", "The Skeptic", "The Leader", "The Film Buff", "The Final Girl", "The Twist Villain", "The Fool"],
+    "murder": ["Criminally Inept", "In for the Long Haul", "True Crime Infamy", "Silver Tongue", "Dead Men Tell No Tales"],
+    "vacation": ["Romania", "Canada", "Thailand", "Greece", "France", "Germany"],
+    "witch": ["Cat Whisperer", "All-Seeing Eyes", "Plant Affinity", "Pyromancy", "Summoner"],
+    "pigeon": ["English Carrier", "Old Dutch", "Reverse Wing", "Brunner Pouter", "Rock Pigeon", "Fairy Swallow"]
+}

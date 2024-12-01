@@ -8,8 +8,17 @@
         $profile_config_names = explode("#", $profile_config);
     }
 
+    $newTitle = "none";
+    if (isset($_GET["newTitle"])) {
+        $newTitle = $_GET["newTitle"];
+    }
+
+    $newAch = "none";
+    if (isset($_GET["newAch"])) {
+        $newAch = $_GET["newAch"];
+    }
+
     $darkMode = "off";
-    
     // check if darkMode is passed in
     if (isset($_GET['darkMode'])) {
         $darkMode = $_GET['darkMode'];
@@ -24,11 +33,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>BuzzScript</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/homepage.css">
     <script>
         let darkMode = '<?php echo $darkMode ?>';
+        let newTitle = '<?php echo $newTitle ?>'
+        let newAch = '<?php echo $newAch ?>'
     </script>
     <script src="js/main.js"></script>
 </head>

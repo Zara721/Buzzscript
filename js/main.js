@@ -11,6 +11,24 @@ document.addEventListener("DOMContentLoaded", () => {
     toggleDarkMode() 
   }
 
+  if (newTitle != "none") {
+    Swal.fire({
+      title: "New Title Unlocked!",
+      html: `You have unlocked the title [<strong>${newTitle}</strong>]`,
+      icon: 'success',
+      confirmButtonText: 'OK'
+    });
+  }
+
+  if (newAch != "none") {
+    Swal.fire({
+      title: "New Achievement Unlocked!",
+      html: `You have unlocked the achievement [<strong>${newAch}</strong>]`,
+      icon: 'success',
+      confirmButtonText: 'OK'
+    });
+  }
+
 
   const navigation = document.getElementById("side-nav");
   const overlay = document.getElementById("overlay")

@@ -85,6 +85,12 @@ article a {
     padding-left: 5px;
     background-color: white;
     width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#ach-list {
+    max-height: 50px;
 }
 
 section h1 {
@@ -103,19 +109,41 @@ hr {
     border: 2px black solid;
 }
 
+#title-list {
+    max-height: 150px;
+}
+
 #title-list button {
     background-color: #f7f7f700;
     cursor: pointer;
 }
 
+
 @media only screen and (max-width:480px) {
     #options {
         height: 300px;
     }
+
+    #title-list {
+        max-height: 160px;
+    }
+
+    #ach-list {
+        max-height: 60px;
+    }
+    
 }
 
 @media only screen and (max-width: 768px) {
     article {
         width: 70vw;
+    }
+
+    #title-list {
+        max-height: 120px;
+    }
+
+    #ach-list {
+        max-height: 60px;
     }
 }
