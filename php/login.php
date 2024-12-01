@@ -31,6 +31,28 @@
                         <option>Existential</option>
                         <option>Happy</option>
                         <option>Grumpy</option>
+                        <option>Nihilistic</option>
+                        <option>Mystical</option>
+                        <option>Flamboyant</option>
+                        <option>Elegant</option>
+                        <option>Ugly</option>
+                        <option>Fluffy</option>
+                        <option>Ashy</option>
+                        <option>Mysterious</option>
+                        <option>Acoustic</option>
+                        <option>Quirky</option>
+                        <option>Prideful</option>
+                        <option>Dusty</option>
+                        <option>Dusty</option>
+                        <option>Imaginary</option>
+                        <option>Noble</option>
+                        <option>Oblivious</option>
+                        <option>Peculiar</option>
+                        <option>Questionable</option>
+                        <option>Tactial</option>
+                        <option>Witty</option>
+                        <option>Violent</option>
+                        <option>Eccentric</option>
                     </select>
                     <select multiple class="form-control" name="username-noun" id="username-noun">
                         <option>Turtle</option>
@@ -39,8 +61,22 @@
                         <option>Cow</option>
                         <option>Raven</option>
                         <option>Panther</option>
-                        <option>Axolotyl</option>
+                        <option>Axolotl</option>
                         <option>Shark</option>
+                        <option>Swan</option>
+                        <option>Mermaid</option>
+                        <option>Unicorn</option>
+                        <option>Narwhal</option>
+                        <option>Goblin</option>
+                        <option>Butterfly</option>
+                        <option>Beaver</option>
+                        <option>Wolf</option>
+                        <option>Gater</option>
+                        <option>Panda</option>
+                        <option>Bear</option>
+                        <option>Owl</option>
+                        <option>Siren</option>
+                        <option>Hedgehog</option>
                     </select>
                 </div>
             </div>

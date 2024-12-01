@@ -6,6 +6,12 @@
         $profile_config = $_SESSION["profile_config"]; //Hat#Body#Ring
     }
 
+    $darkMode = "off";
+    // check if darkMode is on
+    if (isset($_GET['darkMode'])) {
+        $darkMode = $_GET['darkMode'];
+    }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

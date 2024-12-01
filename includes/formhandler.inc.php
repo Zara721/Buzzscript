@@ -1,23 +1,24 @@
 <?php
+session_start();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST["username-adj"] . $_POST["username-noun"];
     $passwd = $_POST["passwd"];
-    $profile_config = "Witch#Orange#Orange";
-    $ach_config = "created_account";
-    $selected_title = "Honey_Newbie";
-    //$title_list = "Honey_Newbie#";
+    $profile_config = "Top#Orange#Orange";
+    $ach_config = "Welcome to the Hive";
+    $selected_title = "Honey Newbie";
+    $title_list = "Honey Newbie";
 
 
     try{
         require_once "dbh.inc.php";
 
-        $query = "INSERT INTO users (username, passwd, profile_config, ach_config, title) 
-        VALUES (?, ?, ?, ?, ?);";
+        $query = "INSERT INTO users (username, passwd, profile_config, ach_config, title, title_list) 
+        VALUES (?, ?, ?, ?, ?, ?);";
 
         $statement = $pdo->prepare($query);
 
-        $statement->execute([$username, $passwd, $profile_config, $ach_config, $selected_title]);
+        $statement->execute([$username, $passwd, $profile_config, $ach_config, $selected_title, $title_list]);
 
         $last_id = $pdo->lastInsertId();
 

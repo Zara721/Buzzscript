@@ -33,10 +33,12 @@ p {
     gap: 20px;
     width: min(500px, 80%);
     text-align: center;
+    height: 150px;
 }
 
 select option {
     color: black;
+    text-align: center;
 }
 
 select option:nth-child(even) {
