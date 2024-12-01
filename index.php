@@ -13,6 +13,8 @@
     // check if darkMode is passed in
     if (isset($_GET['darkMode'])) {
         $darkMode = $_GET['darkMode'];
+    } elseif (isset($_SESSION['darkMode'])) {
+        $darkMode = $_SESSION['darkMode'];
     }
 ?>
 <!DOCTYPE html>
@@ -39,7 +41,7 @@
           <li><a href="#">Leaderboards</a></li>
 
           <?php if ($_SESSION["userStatus"] == "loggedIn") : ?>
-            <li><a href="#">Profile</a></li>
+            <li><a href="php/profile.php" id="profile-link">Profile</a></li>
             <li><a href="php/logout.php" id="logout">Logout</a></li>
           <?php else : ?>
             <li><a href="php/login.php">Log in</a></li>
@@ -56,7 +58,7 @@
                     <div id="profile-pic-container">
                         <img src="assets/Body/<?php echo $profile_config_names [1] ?> Body.png" alt="profile picture body" id="profile-body">
                         <img src="assets/Ring/<?php echo $profile_config_names [2] ?> Ring.png" alt="profile picture body" id="profile-ring">
-                        <a href="php/profile_picture.php">
+                        <a href="php/profile_picture.php" id="profile-pic-link">
                             <img src="assets/Hats/<?php echo $profile_config_names [0] ?> Hat.png" title="Change Profile Picture" alt="profile picture body" id="profile-hat">
                         </a>
                     </div>

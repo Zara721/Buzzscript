@@ -4,6 +4,10 @@ body {
     align-items: center;
 }
 
+body.dark-mode {
+    background-color: rgb(33, 33, 33);
+}
+
 article {
     background-color: #f7f7f7;
     width: max(50vw, 500px);
@@ -59,6 +63,48 @@ article a {
     background-color: rgba(0, 0, 0, 0);
     text-decoration: underline;
     font-weight: bold;
+    cursor: pointer;
+}
+
+/* Exlusive to Profile */
+#profile-header {
+   text-align: center;
+}
+
+#profile-header h2 {
+    font-size: 2em;
+}
+
+#profile-header p {
+    font-size: 1.2em;
+}
+
+#ach-list, #title-list {
+    margin-top: 5px;
+    padding: 10px 0px;
+    padding-left: 5px;
+    background-color: white;
+    width: 100%;
+}
+
+section h1 {
+    padding-top: 5px;
+}
+
+section h2 {
+    font-weight: 300;
+}
+
+#links {
+    padding-top: 5px;
+}
+
+hr {
+    border: 2px black solid;
+}
+
+#title-list button {
+    background-color: #f7f7f700;
     cursor: pointer;
 }
 

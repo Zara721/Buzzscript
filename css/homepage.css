@@ -1,6 +1,6 @@
 body {
     background-image: url("../images/home_bg.png");
-    background-color: white;
+    background-color: #f7f7f7;
     background-size: cover;
     animation: bounce-background 5s ease-in-out infinite;
     display: flex;
@@ -9,7 +9,7 @@ body {
 }
 
 body.dark-mode {
-    background-color: black;
+    background-color: rgb(33, 33, 33);
 }
 
 @keyframes bounce-background {

@@ -43,7 +43,6 @@ main section {
     margin: 15px 20px;
     padding: 20px;
     border-radius: 5px;
-    height: 60vh;
     display: grid;
     align-items: center;
 }
@@ -75,19 +74,11 @@ main a {
     body {
         background-image: url("../assets/Miscellaneous/Phone Background.png");
     }
-
-    main section {
-        height: 250px;
-    }
 }
 
 @media only screen and (min-width: 481px)
 and (max-width: 768px) {
     main {
         width: 80vw;
-    }
-
-    main section {
-        height: 350px;
     }
 }

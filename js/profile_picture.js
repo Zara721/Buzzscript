@@ -8,6 +8,10 @@ document.addEventListener("DOMContentLoaded", () => {
 ;
     console.log(userProfileConfig);
 
+    if (darkMode == "on") {
+        document.querySelector("body").classList.add("dark-mode");
+    }
+
     let profile_config = userProfileConfig.split("#");
     generateProfilePicture()
 

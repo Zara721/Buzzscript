@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../css/profile_picture.css">
     <script>
         let userProfileConfig = '<?php echo $profile_config ?>';
+        const darkMode = '<?php echo $darkMode ?>';
     </script>
     <script src="../js/profile_picture.js"></script>
 </head>
@@ -36,7 +37,7 @@
             <input type="hidden" id="profile-config" name="profile-config">
             <button type="submit" id="update">Update Profile</button>
         </form>
-        <a href="../index.php" id="return">Return</a>
+        <a href="../index.php?darkMode=<?php echo $darkMode?>" id="return">Return</a>
     </article>
 </body>
 </html>

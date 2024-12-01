@@ -1,6 +1,7 @@
 
 document.addEventListener("DOMContentLoaded", () => {
   const anon_username = document.getElementById("anon-username");
+
   if (anon_username) {
     randomizeUsername()
     document.getElementById("die").addEventListener("click", randomizeUsername);
@@ -38,6 +39,15 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector("body").classList.toggle("dark-mode");
     document.querySelector(".username").classList.toggle("dark-mode");
     document.getElementById("menu-btn").classList.toggle("dark-mode");
+
+    if (document.querySelector("body").classList.contains("dark-mode")) {
+      darkMode = "on";
+    } else {
+      darkMode = "off";
+    }
+
+    document.getElementById("profile-pic-link").href = `php/profile_picture.php?darkMode=${darkMode}`
+    document.getElementById("profile-link").href = `php/profile.php?darkMode=${darkMode}`
 
   }
 

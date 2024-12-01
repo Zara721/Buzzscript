@@ -19,7 +19,7 @@ main {
 }
 
 main.dark-mode {
-    background-color: black;
+    background-color: rgb(24, 24, 24);
 }
 
 header {
@@ -38,7 +38,7 @@ header {
 }
 
 header.dark-mode {
-    background-color: black;
+    background-color: rgb(24, 24, 24);
     border: 4px solid #f7f7f7;
     color: #f7f7f7;
 }

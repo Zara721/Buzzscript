@@ -6,11 +6,8 @@ function logoutUser() {
         session_start();
     }
 
-    $_SESSION = array();
-
+    session_unset();
     session_destroy();
-
-    session_regenerate_id(true);
 
     // redirect to home page
     header("Location: ../index.php?darkMode=off");
