@@ -27,12 +27,21 @@ document.addEventListener("DOMContentLoaded", () => {
         profileContainer.appendChild(hatImg);
     }
 
+    const displayTitle = document.getElementById("title");
     document.getElementById("title-list").addEventListener("click", (e)=> {
         if (e.target.tagName === 'SPAN') {
-
-            const displayTitle = document.getElementById("title");
             displayTitle.textContent = e.target.textContent;
         }  
+    });
+
+    document.querySelector('form').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const selected_title = document.getElementById("newTitle");
+        selected_title.value = displayTitle.textContent;
+
+        console.log(selected_title.value);
+        this.submit()
     });
 
 });

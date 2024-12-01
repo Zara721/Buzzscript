@@ -46,7 +46,6 @@
                         <option>Quirky</option>
                         <option>Prideful</option>
                         <option>Dusty</option>
-                        <option>Dusty</option>
                         <option>Imaginary</option>
                         <option>Noble</option>
                         <option>Oblivious</option>

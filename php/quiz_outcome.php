@@ -1,3 +1,24 @@
+<?php
+    session_start();
+
+    if ($_SESSION["userStatus"] = "loggedIn" && isset($_SESSION["id"])) {
+        $userId = $_SESSION["id"];
+
+        try{
+            require_once "../includes/dbh.inc.php";
+    
+            require_once "../includes/getUserInfo.inc.php";
+    
+            $result = getUserInfo($userId, $pdo);
+    
+        } catch (PDOException $e){
+            die("Failed to retrive user info: " . $e->getMessage());
+        }
+    
+        $currentTitles = $result["title_list"];
+    }
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,6 +53,8 @@
             $highestOutcome = "FG";
         }
 
+        //update title based on quiz outcome
+
         $darkMode = "off";
         // check if selected quiz exists
         if (isset($_GET['darkMode'])) {
@@ -57,8 +80,15 @@
             </header>
             <img src="" id="outcome-img">
         </section>
-        <a href="basic_question.php?selectedQuiz=<?php echo $selectedQuiz?>&darkMode=<?php echo $darkMode?>" id="retake">Retake</a>
-        <a href="../index.php?darkMode=<?php echo $darkMode?>" id="home">Home</a>
+        <?php if ($_SESSION["userStatus"] == "loggedIn") : ?>
+            <form action="../includes/formhandler.updatetitle.inc.php" method="post">
+                <input type="hidden" name="currentTitles" value="<?php echo $currentTitles ?>">
+                <input type="hidden" name="newTitle" id="newTitle">
+                <button type="submit" id="home">Home</button>
+            </form>
+        <?php else : ?>
+            <a href="../index.php?darkMode=<?php echo $darkMode?>" id="home">Home</a>
+        <?php endif; ?>
     </main>
 </body>
 </html>

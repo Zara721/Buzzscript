@@ -14,14 +14,7 @@
     }
 
     if(isset($_SESSION["id"])) {
-        $userId = $_SESSION["id"]; //Hat#Body#Ring
-    }
-
-    $darkMode = "off";
-    // check if darkMode is on
-    if (isset($_GET['darkMode'])) {
-        $darkMode = $_GET['darkMode'];
-        $_SESSION["darkMode"] =  $darkMode;
+        $userId = $_SESSION["id"]; 
     }
 
     try{
@@ -88,8 +81,13 @@
         </section>
 
         <section id="links">
+            <form action="../includes/formhandler.profile.inc.php" method="post">
+                <input type="hidden" id="newTitle" name="title">
+                <button type="submit" id="update">Update Profile</button>
+            </form>
             <a href="../index.php?darkMode=<?php echo $darkMode?>" id="return">Return</a>
         </section>
+
     </article>
 </body>
 </html>

@@ -57,13 +57,12 @@ main section {
     display: block;
 }
 
-main a {
+#home {
     color: #f7f7f7;
     font-weight: bold;
-}
-
-#home {
-    float: right;
+    background-color: #f7f7f700;
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 @media only screen and (max-width:480px) {
