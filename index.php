@@ -37,9 +37,6 @@
     <nav id="side-nav">
         <button type="button" class="close-btn">&times;</button>
         <ul>
-          <li><a href="#">Settings</a></li>
-          <li><a href="#">Leaderboards</a></li>
-
           <?php if ($_SESSION["userStatus"] == "loggedIn") : ?>
             <li><a href="php/profile.php" id="profile-link">Profile</a></li>
             <li><a href="php/logout.php" id="logout">Logout</a></li>
@@ -47,6 +44,8 @@
             <li><a href="php/login.php">Log in</a></li>
             <li><a href="php/register.php">Register</a></li>
           <?php endif; ?>
+          <li><a href="#">Achievement List</a></li>
+          <li><a href="#">Title List</a></li>
         </ul>
         <button id="dark-mode-btn">Toggle Dark Mode</button>
     </nav>

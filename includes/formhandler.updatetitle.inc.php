@@ -8,12 +8,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $userId = $_SESSION["id"];
 
     
+    $darkMode = "off";
+    
+    // check if darkMode is passed in
+    if (isset($_GET['darkMode'])) {
+        $darkMode = $_GET['darkMode'];
+    } 
+    
     //check if new title is in title list
     foreach (explode("#", $currentTitles) as $title) {
         echo $newTitle . " " . $title ."<br>";
         echo strlen($newTitle) . " " . strlen($title) ."<br>";
         if ($newTitle == $title) {
-            header("Location: ../index.php"); //return to home page if title has already been gained
+            header("Location: ../index.php?darkMode=$darkMode"); //return to home page if title has already been gained
             exit();
         }
     }
@@ -42,7 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $pdo = null;
         $statement = null;
 
-        header("Location: ../index.php");
+        header("Location: ../index.php?darkMode=$darkMode");
         die();
         
     } catch (PDOException $e){

@@ -81,7 +81,7 @@
             <img src="" id="outcome-img">
         </section>
         <?php if ($_SESSION["userStatus"] == "loggedIn") : ?>
-            <form action="../includes/formhandler.updatetitle.inc.php" method="post">
+            <form action="../includes/formhandler.updatetitle.inc.php?darkMode=<?php echo $darkMode?>" method="post">
                 <input type="hidden" name="currentTitles" value="<?php echo $currentTitles ?>">
                 <input type="hidden" name="newTitle" id="newTitle">
                 <button type="submit" id="home">Home</button>
