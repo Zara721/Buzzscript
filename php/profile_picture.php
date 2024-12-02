@@ -41,6 +41,7 @@
         <div id="options"> </div>
         <form action="../includes/formhandler.profilepic.inc.php" method="post">
             <input type="hidden" id="profile-config" name="profile-config">
+            <input type="hidden" name="darkMode" value="<?php echo $darkMode ?>">
             <button type="submit" id="update">Update Profile</button>
         </form>
         <a href="../index.php?darkMode=<?php echo $darkMode?>" id="return">Return</a>

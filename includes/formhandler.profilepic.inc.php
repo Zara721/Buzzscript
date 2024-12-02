@@ -8,6 +8,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $userId = $_SESSION["id"];
     //echo $userId;
 
+    $darkMode = $_POST["darkMode"];
+
 
     try{
         require_once "dbh.inc.php";
@@ -20,11 +22,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // update session variables
         $_SESSION["profile_config"] = $newProfileConfig;
 
-        header("Location: ../index.php");
+        header("Location: ../index.php?darkMode=$darkMode");
         die();
     } catch (PDOException $e){
         die("Query Failed: " . $e->getMessage());
     }
 } else {
-    header("Location: ../index.php");
+    header("Location: ../index.php?darkMode=$darkMode");
 }

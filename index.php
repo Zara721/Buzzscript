@@ -32,6 +32,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>BuzzScript</title>
+    <link rel="icon" type="image/png" href="assets/Miscellaneous/logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -57,8 +58,8 @@
             <li><a href="php/login.php">Log in</a></li>
             <li><a href="php/register.php">Register</a></li>
           <?php endif; ?>
-          <li><a href="#">Achievement List</a></li>
-          <li><a href="#">Title List</a></li>
+          <!-- <li><a href="#">Achievement List</a></li>
+          <li><a href="#">Title List</a></li> -->
         </ul>
         <button id="dark-mode-btn">Toggle Dark Mode</button>
     </nav>

@@ -2,6 +2,16 @@ const questions = `{
   "horror_character": {
     "bio": "If you entered a horror movie, what role would you play?",
     "option_type": "text",
+    "outcomes": {
+      "OWK": ["The One Who Knows", "You possess uncanny knowledge and intuition that sets you apart.", "one_who_knows.png"],
+      "SV": ["The Survivor", "You have what it takes to weather the storm and make it out alive.", "survivor.avif"],
+      "SK": ["The Skeptic", "You question everything, which might save you... or doom you.", "skeptic.jpg"],
+      "L": ["The Leader", "You take charge when others falter, guiding the group through chaos.", "leader.jpg"],
+      "FB": ["The Film Buff", "You've seen enough horror movies to know the rules and avoid the pitfalls.", "film_buff.jpg"],
+      "FG": ["The Final Girl", "You have the makings of a final girl!", "final_girl.jpg"],
+      "TV": ["The Twist Villain", "You have a dark side, and it might just surprise everyone.", "twist_villain.jpg"],
+      "F": ["The Fool", "Your antics provide levity, but they might also seal your fate.", "fool.png"]
+    },
     "questions": [
       {
         "question": "You hike in the woods in the evening and see an old house in the distance. What do you do?",
@@ -80,17 +90,7 @@ const questions = `{
         "option_d": "Host a party",
         "outcome_d": [["TV", 2], ["FG", 1], ["F", 1]]
       }
-    ],
-    "outcomes": {
-      "OWK": ["The One Who Knows", "You possess uncanny knowledge and intuition that sets you apart.", "one_who_knows.png"],
-      "SV": ["The Survivor", "You have what it takes to weather the storm and make it out alive.", "survivor.avif"],
-      "SK": ["The Skeptic", "You question everything, which might save you... or doom you.", "skeptic.jpg"],
-      "L": ["The Leader", "You take charge when others falter, guiding the group through chaos.", "leader.jpg"],
-      "FB": ["The Film Buff", "You've seen enough horror movies to know the rules and avoid the pitfalls.", "film_buff.jpg"],
-      "FG": ["The Final Girl", "You have the makings of a final girl!", "final_girl.jpg"],
-      "TV": ["The Twist Villain", "You have a dark side, and it might just surprise everyone.", "twist_villain.jpg"],
-      "F": ["The Fool", "Your antics provide levity, but they might also seal your fate.", "fool.png"]
-    }
+    ]
   },
   
   "murder": {
@@ -309,7 +309,7 @@ const questions = `{
           "outcome_d": [["SM", 2]]
         },
         {
-          "question": "Pick an element",
+          "question": "Pick a potion",
           "option_a": "teal_potion.jpg",
           "outcome_a": [["AE", 2], ["SM", 2]],
           "option_b": "red_potion.jpg",
