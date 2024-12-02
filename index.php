@@ -53,13 +53,12 @@
         <ul>
           <?php if ($_SESSION["userStatus"] == "loggedIn") : ?>
             <li><a href="php/profile.php" id="profile-link">Profile</a></li>
+            <li><a href="php/profile_picture.php" id="profile-picture">Change Profile Picture</a></li>
             <li><a href="php/logout.php" id="logout">Logout</a></li>
           <?php else : ?>
             <li><a href="php/login.php">Log in</a></li>
             <li><a href="php/register.php">Register</a></li>
           <?php endif; ?>
-          <!-- <li><a href="#">Achievement List</a></li>
-          <li><a href="#">Title List</a></li> -->
         </ul>
         <button id="dark-mode-btn">Toggle Dark Mode</button>
     </nav>
